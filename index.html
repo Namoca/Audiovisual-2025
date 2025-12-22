@@ -157,7 +157,7 @@ const obras = [
 		titulo: "Interestelar (2014)", 
 		imagem: "https://upload.wikimedia.org/wikipedia/en/b/bc/Interstellar_film_poster.jpg", 
 		descricao: "A trilha sonora avassaladora encontra imagens cósmicas de tirar o fôlego.", 
-		nota: 9.6 
+		nota: 9.91 
 	},
     { 
 		tipo: "jogos", 
@@ -197,7 +197,7 @@ function gerarEstrelas(nota) {
             // Cria uma meia estrela usando sobreposição (compatível com todos os celulares)
             estrelasHTML += '<span style="position:relative; display:inline-block;">' +
                            '<span style="color:#444">☆</span>' +
-                           '<span style="position:absolute; left:0; top:0; width:50%; overflow:hidden;">★</span>' +
+                           '<span style="position:absolute; left:0; top:0; width:45%; overflow:hidden;">★</span>' +
                            '</span>';
         } else {
             estrelasHTML += '<span style="color:#444">☆</span>'; 

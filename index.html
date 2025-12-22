@@ -5,21 +5,40 @@
     <title>Ranking Audiovisual Pro</title>
     <style>
         body { font-family: 'Segoe UI', Arial, sans-serif; background-color: #111; color: #eee; padding: 20px; }
-        h1 { text-align: center; color: gold; }
-        .botoes { text-align: center; margin-bottom: 20px; }
+        h1 { text-align: center; color: gold; margin-bottom: 30px; }
+        
+        .controles { max-width: 800px; margin: 0 auto 30px; text-align: center; }
+        
+        .busca-container { margin-bottom: 20px; }
+        #busca { 
+            width: 100%; max-width: 400px; padding: 12px; border-radius: 25px; 
+            border: 1px solid #444; background: #222; color: white; outline: none;
+            transition: 0.3s;
+        }
+        #busca:focus { border-color: gold; box-shadow: 0 0 10px rgba(255, 215, 0, 0.2); }
+
         .botoes button { 
             background: #222; color: #eee; border: 1px solid #444; 
             padding: 10px 20px; margin: 5px; border-radius: 8px; cursor: pointer;
             transition: 0.3s;
         }
         .botoes button:hover { background: #333; border-color: gold; }
+
         .ranking { max-width: 800px; margin: auto; }
+        
         .item { 
             display: flex; align-items: center; gap: 20px; 
             background: #1e1e1e; margin-bottom: 15px; padding: 15px; 
             border-radius: 12px; border: 1px solid #333;
+            animation: surgimento 0.4s ease-out; /* Animação aqui */
         }
-        .item img { width: 100px; border-radius: 8px; object-fit: cover; }
+
+        @keyframes surgimento {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .item img { width: 100px; height: 150px; border-radius: 8px; object-fit: cover; }
         .posicao { font-size: 28px; font-weight: bold; color: gold; min-width: 50px; text-align: center; }
         .titulo { font-size: 20px; font-weight: bold; margin-bottom: 5px; }
         .descricao { font-size: 14px; color: #aaa; }
@@ -29,12 +48,17 @@
 
 <h1>🏆 Ranking de Experiências</h1>
 
-<div class="botoes">
-    <button onclick="mostrarRanking('geral')">🌌 Geral</button>
-    <button onclick="mostrarRanking('series')">📺 Séries</button>
-    <button onclick="mostrarRanking('filmes')">🎬 Filmes</button>
-    <button onclick="mostrarRanking('jogos')">🎮 Jogos</button>
-    <button onclick="inverterOrdem()">🔁 Inverter Ordem</button>
+<div class="controles">
+    <div class="busca-container">
+        <input type="text" id="busca" placeholder="Pesquisar título..." oninput="filtrar()">
+    </div>
+    <div class="botoes">
+        <button onclick="mostrarRanking('geral')">🌌 Geral</button>
+        <button onclick="mostrarRanking('series')">📺 Séries</button>
+        <button onclick="mostrarRanking('filmes')">🎬 Filmes</button>
+        <button onclick="mostrarRanking('jogos')">🎮 Jogos</button>
+        <button onclick="inverterOrdem()">🔁 Inverter Ordem</button>
+    </div>
 </div>
 
 <div id="ranking-container" class="ranking"></div>
@@ -49,38 +73,38 @@ const obras = [
     { tipo: "jogos", titulo: "Journey (2012)", imagem: "https://upload.wikimedia.org/wikipedia/en/9/9f/Journey_Game_Cover.png", descricao: "Minimalismo visual e musical contemplativo.", nota: 9.4 }
 ];
 
-let rankingAtual = "geral";
+let filtroAtual = "geral";
 let ordemNormal = true;
+let termoBusca = "";
 
-// Função para evitar injeção de scripts (Segurança)
 function escapeHTML(str) {
     const p = document.createElement('p');
     p.textContent = str;
     return p.innerHTML;
 }
 
-function renderizarRanking(tipo) {
-    rankingAtual = tipo;
+function renderizarRanking() {
     const container = document.getElementById("ranking-container");
     
-    // Filtra os itens
-    let lista = tipo === "geral" ? [...obras] : obras.filter(o => o.tipo === tipo);
+    // 1. Filtrar por tipo
+    let lista = filtroAtual === "geral" ? [...obras] : obras.filter(o => o.tipo === filtroAtual);
     
-    // Ordena por nota (Sempre do maior para o menor para definir o "rank")
+    // 2. Filtrar por termo de busca
+    if (termoBusca) {
+        lista = lista.filter(o => o.titulo.toLowerCase().includes(termoBusca.toLowerCase()));
+    }
+    
+    // 3. Ordenar por nota (para definir o rank original)
     lista.sort((a, b) => b.nota - a.nota);
-
     const totalItens = lista.length;
 
-    // Se a ordem for invertida, invertemos o array, mas guardamos o rank original
+    // 4. Inverter se necessário
     if (!ordemNormal) {
         lista.reverse();
     }
 
-    // Gera o HTML de forma eficiente
     const htmlTotal = lista.map((obra, index) => {
-        // Cálculo da posição: Se normal, index+1. Se invertido, total-index.
         const posicaoReal = ordemNormal ? (index + 1) : (totalItens - index);
-        
         return `
             <div class="item">
                 <div class="posicao">#${posicaoReal}</div>
@@ -93,21 +117,25 @@ function renderizarRanking(tipo) {
         `;
     }).join('');
 
-    container.innerHTML = htmlTotal;
+    container.innerHTML = htmlTotal || "<p style='text-align:center'>Nenhum resultado encontrado.</p>";
 }
 
 function mostrarRanking(tipo) {
-    renderizarRanking(tipo);
+    filtroAtual = tipo;
+    renderizarRanking();
 }
 
 function inverterOrdem() {
     ordemNormal = !ordemNormal;
-    renderizarRanking(rankingAtual);
+    renderizarRanking();
 }
 
-// Inicialização
-renderizarRanking("geral");
-</script>
+function filtrar() {
+    termoBusca = document.getElementById("busca").value;
+    renderizarRanking();
+}
 
+renderizarRanking();
+</script>
 </body>
 </html>

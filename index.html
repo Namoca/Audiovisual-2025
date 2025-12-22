@@ -86,11 +86,30 @@
             font-size: 18px;
             margin-top: 10px;
             letter-spacing: 2px;
+            display: flex;
+            align-items: center;
+        }
+
+        /* Estilo para simular a meia estrela de forma compatível */
+        .meia-estrela {
+            position: relative;
+            display: inline-block;
+            width: 1ch;
+            overflow: hidden;
+            white-space: nowrap;
         }
 
         @keyframes surgimento {
             from { opacity: 0; transform: scale(0.95); }
             to { opacity: 1; transform: scale(1); }
+        }
+
+        /* Ajuste responsivo básico para celulares muito pequenos */
+        @media (max-width: 480px) {
+            .item { flex-direction: column; }
+            .posicao { border-right: none; border-bottom: 1px solid #333; padding: 0 0 10px 0; }
+            .img-container { width: 100%; justify-content: center; }
+            .item img { width: 100%; max-width: 200px; }
         }
     </style>
 </head>
@@ -166,18 +185,22 @@ function escapeHTML(str) {
     return p.innerHTML;
 }
 
-// Função que gera as estrelas com base na nota 0-10
+// Função atualizada para máxima compatibilidade mobile
 function gerarEstrelas(nota) {
-    const nota5 = nota / 2; // Converte de 10 para 5
+    const nota5 = nota / 2;
     let estrelasHTML = '';
     
     for (let i = 1; i <= 5; i++) {
         if (nota5 >= i) {
-            estrelasHTML += '★'; // Estrela cheia
+            estrelasHTML += '★'; 
         } else if (nota5 >= i - 0.5) {
-            estrelasHTML += '⯪'; // Estrela meia (caractere unicode)
+            // Cria uma meia estrela usando sobreposição (compatível com todos os celulares)
+            estrelasHTML += '<span style="position:relative; display:inline-block;">' +
+                           '<span style="color:#444">☆</span>' +
+                           '<span style="position:absolute; left:0; top:0; width:50%; overflow:hidden;">★</span>' +
+                           '</span>';
         } else {
-            estrelasHTML += '☆'; // Estrela vazia
+            estrelasHTML += '<span style="color:#444">☆</span>'; 
         }
     }
     return estrelasHTML;

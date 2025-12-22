@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Ranking Audiovisual Pro</title>
+    <style>
+        body { font-family: 'Segoe UI', Arial, sans-serif; background-color: #111; color: #eee; padding: 20px; }
+        h1 { text-align: center; color: gold; }
+        .botoes { text-align: center; margin-bottom: 20px; }
+        .botoes button { 
+            background: #222; color: #eee; border: 1px solid #444; 
+            padding: 10px 20px; margin: 5px; border-radius: 8px; cursor: pointer;
+            transition: 0.3s;
+        }
+        .botoes button:hover { background: #333; border-color: gold; }
+        .ranking { max-width: 800px; margin: auto; }
+        .item { 
+            display: flex; align-items: center; gap: 20px; 
+            background: #1e1e1e; margin-bottom: 15px; padding: 15px; 
+            border-radius: 12px; border: 1px solid #333;
+        }
+        .item img { width: 100px; border-radius: 8px; object-fit: cover; }
+        .posicao { font-size: 28px; font-weight: bold; color: gold; min-width: 50px; text-align: center; }
+        .titulo { font-size: 20px; font-weight: bold; margin-bottom: 5px; }
+        .descricao { font-size: 14px; color: #aaa; }
+    </style>
+</head>
+<body>
+
+<h1>🏆 Ranking de Experiências</h1>
+
+<div class="botoes">
+    <button onclick="mostrarRanking('geral')">🌌 Geral</button>
+    <button onclick="mostrarRanking('series')">📺 Séries</button>
+    <button onclick="mostrarRanking('filmes')">🎬 Filmes</button>
+    <button onclick="mostrarRanking('jogos')">🎮 Jogos</button>
+    <button onclick="inverterOrdem()">🔁 Inverter Ordem</button>
+</div>
+
+<div id="ranking-container" class="ranking"></div>
+
+<script>
+const obras = [
+    { tipo: "series", titulo: "Twin Peaks: The Return (2017)", imagem: "https://upload.wikimedia.org/wikipedia/en/9/9f/Twin_Peaks_Return.jpg", descricao: "Experiência radical onde som e silêncio dominam.", nota: 9.8 },
+    { tipo: "series", titulo: "Dark (2017–2020)", imagem: "https://upload.wikimedia.org/wikipedia/en/d/da/DarkNetflixPosterEnglish.jpg", descricao: "Atmosfera densa e trilha eletrônica opressiva.", nota: 9.2 },
+    { tipo: "filmes", titulo: "Blade Runner 2049 (2017)", imagem: "https://upload.wikimedia.org/wikipedia/en/8/8c/Blade_Runner_2049_poster.png", descricao: "Silêncio e composição visual contemplativa.", nota: 9.7 },
+    { tipo: "filmes", titulo: "Interestelar (2014)", imagem: "https://upload.wikimedia.org/wikipedia/en/b/bc/Interstellar_film_poster.jpg", descricao: "Trilha sonora avassaladora e imagens cósmicas.", nota: 9.6 },
+    { tipo: "jogos", titulo: "INSIDE (2016)", imagem: "https://upload.wikimedia.org/wikipedia/en/5/5e/Inside_cover_art.png", descricao: "Narrativa silenciosa e imersão opressiva.", nota: 9.9 },
+    { tipo: "jogos", titulo: "Journey (2012)", imagem: "https://upload.wikimedia.org/wikipedia/en/9/9f/Journey_Game_Cover.png", descricao: "Minimalismo visual e musical contemplativo.", nota: 9.4 }
+];
+
+let rankingAtual = "geral";
+let ordemNormal = true;
+
+// Função para evitar injeção de scripts (Segurança)
+function escapeHTML(str) {
+    const p = document.createElement('p');
+    p.textContent = str;
+    return p.innerHTML;
+}
+
+function renderizarRanking(tipo) {
+    rankingAtual = tipo;
+    const container = document.getElementById("ranking-container");
+    
+    // Filtra os itens
+    let lista = tipo === "geral" ? [...obras] : obras.filter(o => o.tipo === tipo);
+    
+    // Ordena por nota (Sempre do maior para o menor para definir o "rank")
+    lista.sort((a, b) => b.nota - a.nota);
+
+    const totalItens = lista.length;
+
+    // Se a ordem for invertida, invertemos o array, mas guardamos o rank original
+    if (!ordemNormal) {
+        lista.reverse();
+    }
+
+    // Gera o HTML de forma eficiente
+    const htmlTotal = lista.map((obra, index) => {
+        // Cálculo da posição: Se normal, index+1. Se invertido, total-index.
+        const posicaoReal = ordemNormal ? (index + 1) : (totalItens - index);
+        
+        return `
+            <div class="item">
+                <div class="posicao">#${posicaoReal}</div>
+                <img src="${obra.imagem}" alt="Poster">
+                <div>
+                    <div class="titulo">${escapeHTML(obra.titulo)}</div>
+                    <div class="descricao">${escapeHTML(obra.descricao)}</div>
+                </div>
+            </div>
+        `;
+    }).join('');
+
+    container.innerHTML = htmlTotal;
+}
+
+function mostrarRanking(tipo) {
+    renderizarRanking(tipo);
+}
+
+function inverterOrdem() {
+    ordemNormal = !ordemNormal;
+    renderizarRanking(rankingAtual);
+}
+
+// Inicialização
+renderizarRanking("geral");
+</script>
+
+</body>
+</html>

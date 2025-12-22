@@ -4,44 +4,94 @@
     <meta charset="UTF-8">
     <title>Ranking Audiovisual Pro</title>
     <style>
-        body { font-family: 'Segoe UI', Arial, sans-serif; background-color: #111; color: #eee; padding: 20px; }
-        h1 { text-align: center; color: gold; margin-bottom: 30px; }
-        
+        :root {
+            --primary: #ffd700;
+            --bg-dark: #0a0a0a;
+            --card-bg: #1a1a1a;
+            --text-gray: #aaa;
+            --transition: all 0.3s ease;
+        }
+
+        body { 
+            font-family: 'Segoe UI', system-ui, sans-serif; 
+            background-color: var(--bg-dark); 
+            color: #eee; 
+            padding: 20px; 
+            margin: 0;
+        }
+
+        h1 { text-align: center; color: var(--primary); margin-bottom: 30px; }
+
         .controles { max-width: 800px; margin: 0 auto 30px; text-align: center; }
         
-        .busca-container { margin-bottom: 20px; }
         #busca { 
-            width: 100%; max-width: 400px; padding: 12px; border-radius: 25px; 
-            border: 1px solid #444; background: #222; color: white; outline: none;
-            transition: 0.3s;
+            width: 100%; max-width: 400px; padding: 12px 20px; border-radius: 25px; 
+            border: 1px solid #333; background: #1a1a1a; color: white; outline: none;
+            margin-bottom: 15px; transition: var(--transition);
         }
-        #busca:focus { border-color: gold; box-shadow: 0 0 10px rgba(255, 215, 0, 0.2); }
+        #busca:focus { border-color: var(--primary); }
 
         .botoes button { 
             background: #222; color: #eee; border: 1px solid #444; 
-            padding: 10px 20px; margin: 5px; border-radius: 8px; cursor: pointer;
-            transition: 0.3s;
+            padding: 8px 16px; margin: 4px; border-radius: 6px; cursor: pointer;
+            transition: var(--transition);
         }
-        .botoes button:hover { background: #333; border-color: gold; }
+        .botoes button:hover { background: #333; border-color: var(--primary); }
 
-        .ranking { max-width: 800px; margin: auto; }
-        
+        .ranking { max-width: 850px; margin: auto; }
+
         .item { 
-            display: flex; align-items: center; gap: 20px; 
-            background: #1e1e1e; margin-bottom: 15px; padding: 15px; 
-            border-radius: 12px; border: 1px solid #333;
-            animation: surgimento 0.4s ease-out; /* Animação aqui */
+            display: flex; 
+            align-items: stretch;
+            gap: 20px; 
+            background: var(--card-bg); 
+            margin-bottom: 20px; 
+            padding: 15px; 
+            border-radius: 12px; 
+            border: 1px solid #2a2a2a;
+            animation: surgimento 0.5s ease-out;
+            transition: var(--transition);
+        }
+        .item:hover { transform: translateY(-3px); border-color: #444; box-shadow: 0 10px 20px rgba(0,0,0,0.4); }
+
+        .posicao { 
+            display: flex; align-items: center; justify-content: center;
+            font-size: 24px; font-weight: bold; color: var(--primary); 
+            min-width: 50px; border-right: 1px solid #333; padding-right: 10px;
+        }
+
+        .img-container { width: 120px; display: flex; align-items: center; }
+
+        .item img { 
+            width: 120px; height: 100%; min-height: 120px; 
+            object-fit: cover; border-radius: 8px; background: #222;
+        }
+
+        .conteudo {
+            flex: 1; display: flex; flex-direction: column;
+            justify-content: center; gap: 5px;
+        }
+
+        .tag-tipo { 
+            font-size: 10px; text-transform: uppercase; color: var(--primary); 
+            letter-spacing: 1px; margin-bottom: 4px; opacity: 0.8;
+        }
+
+        .titulo { font-size: 1.2rem; font-weight: bold; color: #fff; line-height: 1.2; }
+        .descricao { font-size: 0.95rem; color: var(--text-gray); margin-top: 5px; }
+
+        /* ESTRELAS */
+        .estrelas {
+            color: var(--primary);
+            font-size: 18px;
+            margin-top: 10px;
+            letter-spacing: 2px;
         }
 
         @keyframes surgimento {
-            from { opacity: 0; transform: translateY(15px); }
-            to { opacity: 1; transform: translateY(0); }
+            from { opacity: 0; transform: scale(0.95); }
+            to { opacity: 1; transform: scale(1); }
         }
-
-        .item img { width: 100px; height: 150px; border-radius: 8px; object-fit: cover; }
-        .posicao { font-size: 28px; font-weight: bold; color: gold; min-width: 50px; text-align: center; }
-        .titulo { font-size: 20px; font-weight: bold; margin-bottom: 5px; }
-        .descricao { font-size: 14px; color: #aaa; }
     </style>
 </head>
 <body>
@@ -49,15 +99,13 @@
 <h1>🏆 Ranking de Experiências</h1>
 
 <div class="controles">
-    <div class="busca-container">
-        <input type="text" id="busca" placeholder="Pesquisar título..." oninput="filtrar()">
-    </div>
+    <input type="text" id="busca" placeholder="Pesquisar..." oninput="filtrar()">
     <div class="botoes">
         <button onclick="mostrarRanking('geral')">🌌 Geral</button>
         <button onclick="mostrarRanking('series')">📺 Séries</button>
         <button onclick="mostrarRanking('filmes')">🎬 Filmes</button>
         <button onclick="mostrarRanking('jogos')">🎮 Jogos</button>
-        <button onclick="inverterOrdem()">🔁 Inverter Ordem</button>
+        <button onclick="inverterOrdem()">🔁 Inverter</button>
     </div>
 </div>
 
@@ -65,16 +113,51 @@
 
 <script>
 const obras = [
-    { tipo: "series", titulo: "Twin Peaks: The Return (2017)", imagem: "img/cavalo.jpeg", descricao: "Experiência radical onde som e silêncio dominam.", nota: 9.8 },
-    { tipo: "series", titulo: "Dark (2017–2020)", imagem: "https://upload.wikimedia.org/wikipedia/en/d/da/DarkNetflixPosterEnglish.jpg", descricao: "Atmosfera densa e trilha eletrônica opressiva.", nota: 9.2 },
-    { tipo: "filmes", titulo: "Blade Runner 2049 (2017)", imagem: "https://upload.wikimedia.org/wikipedia/en/8/8c/Blade_Runner_2049_poster.png", descricao: "Silêncio e composição visual contemplativa.", nota: 9.7 },
-    { tipo: "filmes", titulo: "Interestelar (2014)", imagem: "https://upload.wikimedia.org/wikipedia/en/b/bc/Interstellar_film_poster.jpg", descricao: "Trilha sonora avassaladora e imagens cósmicas.", nota: 9.6 },
-    { tipo: "jogos", titulo: "INSIDE (2016)", imagem: "https://upload.wikimedia.org/wikipedia/en/5/5e/Inside_cover_art.png", descricao: "Narrativa silenciosa e imersão opressiva.", nota: 9.9 },
-    { tipo: "jogos", titulo: "Journey (2012)", imagem: "https://upload.wikimedia.org/wikipedia/en/9/9f/Journey_Game_Cover.png", descricao: "Minimalismo visual e musical contemplativo.", nota: 9.4 }
+    { 
+		tipo: "series", 
+		titulo: "Twin Peaks: The Return (2017)", 
+		imagem: "img/cavalo.jpeg", 
+		descricao: "Uma experiência audiovisual radical onde o design de som e o silêncio dominam a narrativa.", 
+		nota: 3.0 
+	},
+    { 
+		tipo: "series", titulo: "Dark (2017–2020)", 
+		imagem: "https://upload.wikimedia.org/wikipedia/en/d/da/DarkNetflixPosterEnglish.jpg", 
+		descricao: "Atmosfera densa e trilha eletrônica opressiva que se molda à trama temporal.", 
+		nota: 9.2 
+	},
+    { 
+		tipo: "filmes", 
+		titulo: "Blade Runner 2049 (2017)", 
+		imagem: "https://upload.wikimedia.org/wikipedia/en/8/8c/Blade_Runner_2049_poster.png", 
+		descricao: "Silêncio absoluto e composição visual contemplativa monumental.", 
+		nota: 9.7 
+	},
+    { 
+		tipo: "filmes", 
+		titulo: "Interestelar (2014)", 
+		imagem: "https://upload.wikimedia.org/wikipedia/en/b/bc/Interstellar_film_poster.jpg", 
+		descricao: "A trilha sonora avassaladora encontra imagens cósmicas de tirar o fôlego.", 
+		nota: 9.6 
+	},
+    { 
+		tipo: "jogos", 
+		titulo: "INSIDE (2016)", 
+		imagem: "https://upload.wikimedia.org/wikipedia/en/5/5e/Inside_cover_art.png", 
+		descricao: "Narrativa puramente visual com imersão sonora opressiva.", 
+		nota: 9.9 
+	},
+    { 
+		tipo: "jogos", 
+		titulo: "Journey (2012)", 
+		imagem: "https://upload.wikimedia.org/wikipedia/en/9/9f/Journey_Game_Cover.png", 
+		descricao: "Minimalismo visual e uma jornada musical evolutiva.", 
+		nota: 9.4 
+	}
 ];
 
 let filtroAtual = "geral";
-let ordemNormal = true;
+let ordemNormal = false;
 let termoBusca = "";
 
 function escapeHTML(str) {
@@ -83,57 +166,60 @@ function escapeHTML(str) {
     return p.innerHTML;
 }
 
+// Função que gera as estrelas com base na nota 0-10
+function gerarEstrelas(nota) {
+    const nota5 = nota / 2; // Converte de 10 para 5
+    let estrelasHTML = '';
+    
+    for (let i = 1; i <= 5; i++) {
+        if (nota5 >= i) {
+            estrelasHTML += '★'; // Estrela cheia
+        } else if (nota5 >= i - 0.5) {
+            estrelasHTML += '⯪'; // Estrela meia (caractere unicode)
+        } else {
+            estrelasHTML += '☆'; // Estrela vazia
+        }
+    }
+    return estrelasHTML;
+}
+
 function renderizarRanking() {
     const container = document.getElementById("ranking-container");
-    
-    // 1. Filtrar por tipo
     let lista = filtroAtual === "geral" ? [...obras] : obras.filter(o => o.tipo === filtroAtual);
     
-    // 2. Filtrar por termo de busca
     if (termoBusca) {
         lista = lista.filter(o => o.titulo.toLowerCase().includes(termoBusca.toLowerCase()));
     }
     
-    // 3. Ordenar por nota (para definir o rank original)
     lista.sort((a, b) => b.nota - a.nota);
     const totalItens = lista.length;
+    if (!ordemNormal) lista.reverse();
 
-    // 4. Inverter se necessário
-    if (!ordemNormal) {
-        lista.reverse();
-    }
-
-    const htmlTotal = lista.map((obra, index) => {
+    container.innerHTML = lista.map((obra, index) => {
         const posicaoReal = ordemNormal ? (index + 1) : (totalItens - index);
+        
         return `
             <div class="item">
                 <div class="posicao">#${posicaoReal}</div>
-                <img src="${obra.imagem}" alt="Poster">
-                <div>
+                
+                <div class="img-container">
+                    <img src="${obra.imagem}" alt="Poster" onerror="this.src='https://via.placeholder.com/120x150?text=Erro'">
+                </div>
+
+                <div class="conteudo">
+                    <span class="tag-tipo">${obra.tipo}</span>
                     <div class="titulo">${escapeHTML(obra.titulo)}</div>
                     <div class="descricao">${escapeHTML(obra.descricao)}</div>
+                    <div class="estrelas">${gerarEstrelas(obra.nota)}</div>
                 </div>
             </div>
         `;
-    }).join('');
-
-    container.innerHTML = htmlTotal || "<p style='text-align:center'>Nenhum resultado encontrado.</p>";
+    }).join('') || "<p style='text-align:center; color:#666'>Nenhum resultado encontrado.</p>";
 }
 
-function mostrarRanking(tipo) {
-    filtroAtual = tipo;
-    renderizarRanking();
-}
-
-function inverterOrdem() {
-    ordemNormal = !ordemNormal;
-    renderizarRanking();
-}
-
-function filtrar() {
-    termoBusca = document.getElementById("busca").value;
-    renderizarRanking();
-}
+function mostrarRanking(tipo) { filtroAtual = tipo; renderizarRanking(); }
+function inverterOrdem() { ordemNormal = !ordemNormal; renderizarRanking(); }
+function filtrar() { termoBusca = document.getElementById("busca").value; renderizarRanking(); }
 
 renderizarRanking();
 </script>

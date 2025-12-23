@@ -198,8 +198,11 @@ const obras = [
         tipo: "filmes", 
         titulo: "Corra que a Polícia Vem Aí! (2025)", 
         imagem: "img/policia.jpg", 
-        descricao: "", 
-        nota: 0.0 
+        descricao: "Eu ri muito e ri alto. Eu adoro o gênero de comédia pastelão com situações e personagens mais que absurdos. "+
+		           "O filme emplaca boas piadas que se alternam com outras não tão bem encaixadas, seja por se prologarem demais ou por só funcionarem para o público norte americano"+
+				   ", porém sem comprometer completamente nenhum dos atos. Não há um longo período sem risadas. "+
+				   "Não acho que esteja no mesmo nível do original, mas traz um bom respiro para ese gênero abandonado nos últimos anos.", 
+        nota: 5.4 
     },
 	{ 
         tipo: "filmes", 
@@ -302,8 +305,10 @@ const obras = [
         tipo: "jogos", 
         titulo: "Shadow of The Tomb Raider (2018)", 
         imagem: "img/tomb3.png", 
-        descricao: "", 
-        nota: 0.0 
+        descricao: "É um mais do mesmo cansativo. Os primeiros dois jogos da trilogia deixam um gostinho de quero mais, algo que se perde nesse terceiro. "+ 
+		           "Após terminá-lo, não tive vontade de ir atrás de qualquer outra obra de Tomb Raider. Avaliando somente o jogo em si, não há muito do que reclamar, porém não há inovação frente aos anteriores. "+
+				   "Mesma jogabilidade e dinâmicas com uma história menos involvente. Para quem gosta do gênero de aventura é um prato cheio...que já foi comido outras duas vezes.",
+        nota: 5.5 
     },
 	{ 
         tipo: "jogos", 
@@ -351,8 +356,10 @@ const obras = [
         tipo: "jogos", 
         titulo: "Metroid Prime 3: Corruption (2007)", 
         imagem: "img/metroid.jpg", 
-        descricao: "", 
-        nota: 0.0 
+        descricao: "Cadê essa esquerda jogador?! Eu passei mais tempo perdido ou tentando ir por caminhos sem saída do que jogando de fato. Os mapas são labirínticos e não acho que seja de propósito. "+
+			       "Muitas vezes é preciso mudar de planeta para descobrir uma região inesplorada que eu podia jurar que não estava ali antes. Fora essa parte que me deixou muitas vezes frustado com minha incapacidade de localização, há muitos pontos positivos. "+
+				   "O combate é dinâmico, ainda mais usando os controles do Nintendo Wii, as mecânicas de exploração e inimigos são criativas e os designs com estética biomecânica dão um toque único para o universo do jogo.",
+        nota: 5.3 
     },
 	{ 
         tipo: "jogos", 

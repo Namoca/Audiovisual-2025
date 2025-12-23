@@ -212,7 +212,7 @@ const obras = [
     },
 	{ 
         tipo: "filmes", 
-        titulo: "Missão Impossível: O Acerto Final", 
+        titulo: "Missão Impossível: O Acerto Final (2025)", 
         imagem: "img/missao.png", 
         descricao: "", 
         nota: 0.0 
@@ -258,5 +258,113 @@ const obras = [
         imagem: "img/coringa.jpg", 
         descricao: "", 
         nota: 0.0 
+    },
+
+//jogos
+	{ 
+        tipo: "jogos", 
+        titulo: "Batman: Arkham City (2011)", 
+        imagem: "img/batman.jpg", 
+        descricao: "", 
+        nota: 0.0 
+    },
+	{ 
+        tipo: "jogos", 
+        titulo: "Tomb Raider (2013)", 
+        imagem: "img/tomb1.jpg", 
+        descricao: "", 
+        nota: 0.0 
+    },
+	{ 
+        tipo: "jogos", 
+        titulo: "Rise of the Tomb Raider (2015)", 
+        imagem: "img/tomb2.jpg", 
+        descricao: "", 
+        nota: 0.0 
+    },
+	{ 
+        tipo: "jogos", 
+        titulo: "Shadow of The Tomb Raider (2018)", 
+        imagem: "img/tomb3.png", 
+        descricao: "", 
+        nota: 0.0 
+    },
+	{ 
+        tipo: "jogos", 
+        titulo: "Silent Hill 2 (2001)", 
+        imagem: "img/silent.png", 
+        descricao: "", 
+        nota: 0.0 
+    },
+	{ 
+        tipo: "jogos", 
+        titulo: "South Park: The Stick of Truth (2014)", 
+        imagem: "img/stick.jpeg", 
+        descricao: "", 
+        nota: 0.0 
+    },
+	{ 
+        tipo: "jogos", 
+        titulo: "South Park: The Fractured But Whole (2017)", 
+        imagem: "img/fractured.jpeg", 
+        descricao: "", 
+        nota: 0.0 
+    },
+	{ 
+        tipo: "jogos", 
+        titulo: "Astro Bot (2024)", 
+        imagem: "img/astro.jpg", 
+        descricao: "", 
+        nota: 0.0 
+    },
+	{ 
+        tipo: "jogos", 
+        titulo: "The Last of Us Part I (2022)", 
+        imagem: "img/tlou1.png", 
+        descricao: "", 
+        nota: 0.0 
+    },
+	{ 
+        tipo: "jogos", 
+        titulo: "The Last of Us Part II (2024)", 
+        imagem: "img/tlou2.jpeg", 
+        descricao: "", 
+        nota: 0.0 
+    },
+	{ 
+        tipo: "jogos", 
+        titulo: "Metroid Prime 3: Corruption (2007)", 
+        imagem: "img/metroid.jpg", 
+        descricao: "", 
+        nota: 0.0 
+    },
+	{ 
+        tipo: "jogos", 
+        titulo: "Resident Evil 2 Remake (2019)", 
+        imagem: "img/re2.png", 
+        descricao: "", 
+        nota: 0.0 
+    },
+	{ 
+        tipo: "jogos", 
+        titulo: "Resident Evil 3 Remake (2020)", 
+        imagem: "img/re3.jpg", 
+        descricao: "", 
+        nota: 0.0 
+    },
+	{ 
+        tipo: "jogos", 
+        titulo: "Injustice 2 (2017)", 
+        imagem: "img/injustice2.jpg", 
+        descricao: "", 
+        nota: 0.0 
+    },
+	{ 
+        tipo: "jogos", 
+        titulo: "Fallout 4 (2015)", 
+        imagem: "img/fallout4.jpg", 
+        descricao: "", 
+        nota: 0.0 
     }
+	
 ];

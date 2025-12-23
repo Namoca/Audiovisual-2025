@@ -2,9 +2,11 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ranking Audiovisual Pro</title>
     <style>
         :root { --primary: #ffd700; --bg-dark: #0a0a0a; --card-bg: #1a1a1a; --text-gray: #aaa; --transition: all 0.3s ease; }
+        
         body { font-family: 'Segoe UI', system-ui, sans-serif; background-color: var(--bg-dark); color: #eee; padding: 20px; margin: 0; }
         
         /* Estilo da Propaganda */
@@ -30,51 +32,80 @@
             background: rgba(0,0,0,0.7);
             color: #fff;
             border: 1px solid #555;
-            width: 28px;
-            height: 28px;
+            width: 32px;
+            height: 32px;
             border-radius: 50%;
             cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
             font-weight: bold;
-            transition: var(--transition);
             z-index: 10;
         }
-        .btn-fechar-ad:hover { background: #ff4444; border-color: #ff4444; }
 
-        h1 { text-align: center; color: var(--primary); margin-bottom: 30px; }
+        h1 { text-align: center; color: var(--primary); margin-bottom: 30px; padding: 0 10px; }
         
-        .controles { max-width: 800px; margin: 0 auto 30px; text-align: center; }
-        #busca { width: 100%; max-width: 400px; padding: 12px 20px; border-radius: 25px; border: 1px solid #333; background: #1a1a1a; color: white; outline: none; margin-bottom: 20px; transition: var(--transition); }
+        .controles { max-width: 800px; margin: 0 auto 30px; text-align: center; padding: 0 10px; }
+        #busca { width: 100%; max-width: 400px; padding: 12px 20px; border-radius: 25px; border: 1px solid #333; background: #1a1a1a; color: white; outline: none; margin-bottom: 20px; box-sizing: border-box; }
         #busca:focus { border-color: var(--primary); }
         
         .botoes-container { display: flex; flex-direction: column; gap: 15px; align-items: center; }
         .grupo-botoes { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
         
-        button { background: #222; color: #eee; border: 1px solid #444; padding: 8px 16px; border-radius: 6px; cursor: pointer; transition: var(--transition); }
+        button { background: #222; color: #eee; border: 1px solid #444; padding: 10px 16px; border-radius: 6px; cursor: pointer; transition: var(--transition); font-size: 0.9rem; }
         button:hover { background: #333; border-color: var(--primary); }
         
-        .btn-inverter { background: #2a2a2a; border-color: #555; font-weight: bold; padding: 10px 20px; margin-top: 5px; }
-        .btn-inverter:hover { background: var(--primary); color: #000; }
+        .btn-inverter { background: #2a2a2a; border-color: #555; font-weight: bold; padding: 10px 20px; width: auto; }
 
-        .ranking { max-width: 850px; margin: auto; }
+        .ranking { max-width: 850px; margin: auto; padding-bottom: 50px; }
         .item { display: flex; align-items: stretch; gap: 20px; background: var(--card-bg); margin-bottom: 20px; padding: 15px; border-radius: 12px; border: 1px solid #2a2a2a; animation: surgimento 0.5s ease-out; transition: var(--transition); }
-        .item:hover { transform: translateY(-3px); border-color: #444; box-shadow: 0 10px 20px rgba(0,0,0,0.4); }
-        .posicao { display: flex; align-items: center; justify-content: center; font-size: 24px; font-weight: bold; color: var(--primary); min-width: 50px; border-right: 1px solid #333; padding-right: 10px; }
-        .img-container { width: 120px; display: flex; align-items: center; }
-        .item img { width: 120px; height: 100%; min-height: 120px; object-fit: cover; border-radius: 8px; background: #222; }
+        
+        .posicao { display: flex; align-items: center; justify-content: center; font-size: 24px; font-weight: bold; color: var(--primary); min-width: 60px; border-right: 1px solid #333; padding-right: 10px; }
+        .img-container { width: 120px; display: flex; align-items: center; justify-content: center; }
+        .item img { width: 120px; height: 160px; object-fit: cover; border-radius: 8px; background: #222; }
+        
         .conteudo { flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 5px; }
-        .tag-tipo { font-size: 10px; text-transform: uppercase; color: var(--primary); letter-spacing: 1px; margin-bottom: 4px; opacity: 0.8; }
-        .titulo { font-size: 1.2rem; font-weight: bold; color: #fff; line-height: 1.2; }
-        .descricao { font-size: 0.95rem; color: var(--text-gray); margin-top: 5px; }
-        .estrelas { color: var(--primary); font-size: 18px; margin-top: 10px; letter-spacing: 2px; display: flex; align-items: center; }
+        .tag-tipo { font-size: 10px; text-transform: uppercase; color: var(--primary); letter-spacing: 1px; opacity: 0.8; }
+        .titulo { font-size: 1.2rem; font-weight: bold; color: #fff; }
+        .descricao { font-size: 0.95rem; color: var(--text-gray); }
+        .estrelas { color: var(--primary); font-size: 18px; margin-top: 5px; letter-spacing: 2px; }
 
-        .card-disclaimer { background: var(--card-bg); padding: 30px; border-radius: 12px; border: 1px dashed #444; line-height: 1.6; color: var(--text-gray); animation: surgimento 0.5s ease-out; }
-        .card-disclaimer h2 { color: var(--primary); margin-top: 0; }
+        .card-disclaimer { background: var(--card-bg); padding: 25px; border-radius: 12px; border: 1px dashed #444; line-height: 1.6; color: var(--text-gray); }
 
-        @keyframes surgimento { from { opacity: 0; transform: scale(0.95); } to { opacity: 1; transform: scale(1); } }
-        @media (max-width: 480px) { .item { flex-direction: column; } .posicao { border-right: none; border-bottom: 1px solid #333; padding: 0 0 10px 0; } .img-container { width: 100%; justify-content: center; } .item img { width: 100%; max-width: 200px; } }
+        @keyframes surgimento { from { opacity: 0; transform: scale(0.98); } to { opacity: 1; transform: scale(1); } }
+
+        /* --- AJUSTES PARA CELULAR --- */
+        @media (max-width: 600px) {
+            body { padding: 10px; }
+            
+            .grupo-botoes { 
+                display: grid; 
+                grid-template-columns: repeat(2, 1fr); 
+                width: 100%; 
+            }
+            
+            .btn-inverter { width: 100%; grid-column: span 2; }
+
+            .item { 
+                flex-direction: column; 
+                align-items: center; 
+                text-align: center;
+                padding: 20px;
+            }
+
+            .posicao { 
+                border-right: none; 
+                border-bottom: 1px solid #333; 
+                padding: 0 0 10px 0; 
+                min-width: auto;
+                width: 100%;
+            }
+
+            .img-container { width: 100%; }
+            .item img { width: 140px; height: auto; }
+
+            .estrelas { justify-content: center; }
+        }
     </style>
 </head>
 <body>
@@ -95,12 +126,10 @@
             <button onclick="mostrarRanking('series')">📺 Séries</button>
             <button onclick="mostrarRanking('filmes')">🎬 Filmes</button>
             <button onclick="mostrarRanking('jogos')">🎮 Jogos</button>
-            <button onclick="mostrarDisclaimer()">⚖️ Aviso</button>
+            <button onclick="mostrarDisclaimer()" style="grid-column: span 2;">⚖️ Aviso Legal</button>
         </div>
 
-        <div class="grupo-botoes">
-            <button class="btn-inverter" onclick="inverterOrdem()">🔁 Inverter Ordem</button>
-        </div>
+        <button class="btn-inverter" onclick="inverterOrdem()">🔁 Inverter Ordem</button>
     </div>
 </div>
 
@@ -150,8 +179,8 @@
                 <div class="card-disclaimer">
                     <h2>⚖️ Disclaimer / Aviso Legal</h2>
                     <p>As avaliações e notas apresentadas neste ranking refletem apenas uma <strong>opinião pessoal e subjetiva</strong> baseada em minha experiência individual com cada obra e o que foi-me dito pelos microplásticos em meu cérebro.</p>
-                    <p>Vale ressaltar que só estão presentes obras que eu vi/joguei pela primeira vez no ano de 2025. Além disso, não tenha medo de spoilers, como é algo mais subjetivo foquei em comentários mais gerais.</p>
-					<p>Caso queira discutir qualquer um dos itens incluída ou entrar em contato por qualquer outro motivo, <strong>@pietropilz</strong>.
+                    <p>Vale ressaltar que só estão presentes obras que eu vi/joguei pela primeira vez no ano de 2025.</p>
+                    <p>Caso queira discutir qualquer um dos itens incluídos ou entrar em contato, <strong>@pietropilz</strong>.</p>
                     <hr style="border:0; border-top:1px solid #333; margin:20px 0;">
                     <p><small>As imagens e marcas citadas são de propriedade de seus respectivos detentores de direitos. Uso meramente ilustrativo.</small></p>
                 </div>

@@ -151,8 +151,11 @@ const obras = [
         tipo: "filmes", 
         titulo: "Rivais (2024)", 
         imagem: "img/rivais.jpeg", 
-        descricao: "", 
-        nota: 0.0 
+        descricao: "Demorei muito para entender que era um filme sobre broderagem. Honestamente, vi o filme uma vez em janeiro e não reassisti, então não lembro suficientemente bem dele para uma análise mais profunda. " +
+		           "Talvez por isso esteja tão baixo, é esquecível. Durante a assistida, fiquei curioso com uma parte do filme que não era o foco, que encerra de maneira mais subjetiva em comparação com a linha pricipal que eu só saquei que tava lá no final. "+
+				   "Sim, tinha várias passagens dessa trama que eu não as valorizei o suficiente porque queria saber quem ganharia a partida e se uma certa personagem plantaria o que cultivou. "+
+				   "Em geral, o ritmo, direção e atuação são bons, mas nada que realmente tenha me marcado de alguma forma.", 
+        nota: 5.1 
     },
 	{ 
         tipo: "filmes", 

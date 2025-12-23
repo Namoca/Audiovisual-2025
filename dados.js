@@ -235,8 +235,9 @@ const obras = [
         tipo: "filmes", 
         titulo: "O Casamento do Meu Melhor Amigo (1997)", 
         imagem: "img/casamento.jpg", 
-        descricao: "", 
-        nota: 0.0 
+        descricao: "Não é minha comédia romântica favorita da Julia Roberts. Ao meu ver, o filme vai demais para o lado do constrangimento de uma forma não tão boa, porém é comédia e não acho justo julgá-lo somente pelo tipo de humor. "+
+		           "Meu verdadeiro problema com esse filme é que não consigo torcer para a protagonista. Não acho que ela mereça o cara e a noiva dele é uma pessoa tão legal. Como podem ver, bem subjetivo.", 
+        nota: 5.2 
     },
 	{ 
         tipo: "filmes", 

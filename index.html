@@ -9,21 +9,26 @@
         
         body { font-family: 'Segoe UI', system-ui, sans-serif; background-color: var(--bg-dark); color: #eee; padding: 20px; margin: 0; }
         
-        /* Estilo da Propaganda */
-        .banner-container {
-            position: relative;
-            max-width: 500px;
-            margin: 0 auto 30px;
-            background: #151515;
-            border: 1px solid #333;
-            border-radius: 12px;
-            overflow: hidden;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100px;
-            animation: surgimento 0.5s ease-out;
-        }
+        /* Estilo da Propaganda Fixa */
+		.banner-container {
+			position: fixed; /* Faz seguir a tela */
+			bottom: 20px;    /* Distância do fundo da tela */
+			left: 50%;       /* Centraliza horizontalmente */
+			transform: translateX(-50%); /* Ajuste fino da centralização */
+			width: 90%;      /* Largura responsiva */
+			max-width: 500px;
+			background: #151515;
+			border: 2px solid var(--primary); /* Destaque opcional */
+			border-radius: 12px;
+			overflow: hidden;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			min-height: 80px;
+			z-index: 9999; /* Garante que fique acima de tudo */
+			box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+			animation: surgimento 0.5s ease-out;
+		}
         .banner-container img { width: 100%; height: auto; display: block; max-height: 300px; object-fit: cover; }
         .btn-fechar-ad {
             position: absolute;
@@ -115,7 +120,7 @@
     <img src="img/anuncio.png" alt="Anúncio">
 </div>
 
-<h1>🏆 Ranking de Experiências</h1>
+<h1>🏆 First Time Consumed 2025</h1>
 
 <div class="controles">
     <input type="text" id="busca" placeholder="Pesquisar título..." oninput="filtrar()">
@@ -126,7 +131,7 @@
             <button onclick="mostrarRanking('series')">📺 Séries</button>
             <button onclick="mostrarRanking('filmes')">🎬 Filmes</button>
             <button onclick="mostrarRanking('jogos')">🎮 Jogos</button>
-            <button onclick="mostrarDisclaimer()" style="grid-column: span 2;">⚖️ Aviso Legal</button>
+            <button onclick="mostrarDisclaimer()" style="grid-column: span 2;">⚠️ Avisos</button>
         </div>
 
         <button class="btn-inverter" onclick="inverterOrdem()">🔁 Inverter Ordem</button>
@@ -177,7 +182,7 @@
         if (visualizandoDisclaimer) {
             container.innerHTML = `
                 <div class="card-disclaimer">
-                    <h2>⚖️ Disclaimer / Aviso Legal</h2>
+                    <h2> Disclaimer / Avisos</h2>
                     <p>As avaliações e notas apresentadas neste ranking refletem apenas uma <strong>opinião pessoal e subjetiva</strong> baseada em minha experiência individual com cada obra e o que foi-me dito pelos microplásticos em meu cérebro.</p>
                     <p>Vale ressaltar que só estão presentes obras que eu vi/joguei pela primeira vez no ano de 2025.</p>
                     <p>Caso queira discutir qualquer um dos itens incluídos ou entrar em contato, <strong>@pietropilz</strong>.</p>

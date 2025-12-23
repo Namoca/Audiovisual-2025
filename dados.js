@@ -186,8 +186,10 @@ const obras = [
         tipo: "filmes", 
         titulo: "Mickey 17 (2025)", 
         imagem: "img/mickey.jpeg", 
-        descricao: "", 
-        nota: 0.0 
+        descricao: "Eu adorei Parasita, adoro o Robert Pattinson, adoro ficção científica e adorei a premissa. Deve ser por isso que esse filme acabou sendo tão decepcionante. "+
+				   "Primeiro que não parece um filme, parece dois filmes misturados, ligados por uma 'crítica social f#da'. Eu gostei das duas tramas e gostei da crítica, apesar de não achar que a junção final acabou muito bem. "+
+				   "Não faço ideia do quanto disso já estava presente no livro, então considerando o que vi: Robert Pattinson está muito bem no filme, os conceitos de ficção e política apresentdos são bons, mas as peças não se encaixam da melhor maneira.", 
+        nota: 4.4 
     },
 	{ 
         tipo: "filmes", 
@@ -214,8 +216,10 @@ const obras = [
         tipo: "filmes", 
         titulo: "Missão Impossível: O Acerto Final (2025)", 
         imagem: "img/missao.png", 
-        descricao: "", 
-        nota: 0.0 
+        descricao: "Eu gostei mais da parte um do que a maioria das pessoas. Acho que um antagonista praticamente onisciente em um filme de espionagem é um conceito que poderia ser muito bem aproveitado. Não foi. "+
+				   "Não é um filme ruim, porém está muito mais próximo de um filme de ação genérico do que da franquia Missão Impossível. "+
+				   "Acabei me perdendo do filme em cenas que extrapolam demais o 'impossível' e fiquei decepcionado com o suposto desfecho dessa saga.", 
+        nota: 4.3 
     },
 	{ 
         tipo: "filmes", 
@@ -235,29 +239,37 @@ const obras = [
         tipo: "filmes", 
         titulo: "Magnólia (1999)", 
         imagem: "img/magnolia.png", 
-        descricao: "", 
-        nota: 0.0 
+        descricao: "Eu não entendi esse filme. É a única expliação para eu não ter gostado. O elenco é estreladíssimo e entrega cenas muito bonitas e verdadeiras. "+
+				   "Meu problema com o filme é esse, é tudo muito verdadeiro. Pessoas com problemas reais, agindo como pessoas reais. Eu quis domir, porque isso tudo não parecia estar indo para lugar nenhum. "+
+				   "Provavelmente em alguns anos devo reassistir com uma bagagem que não tenho hoje e somente existir por mais tempo sobre a terra pode me trazer. Um spoiler: Chove sapo.", 
+        nota: 4.1 
     },
 	{ 
         tipo: "filmes", 
         titulo: "Jurassic World Rebirth (2025)", 
         imagem: "img/jurassic.jpg", 
-        descricao: "", 
-        nota: 0.0 
+        descricao: "Não fede nem cheira, o que para a maior franquia sobre dinossauros já concebida é algo que não deveria acontecer. Eles têm DINOSSAUROS e conseguem esquecer disso. "+
+				   "Eu com uma faca de pão causo mais estrago que o T-Rex desse filme. O segundo núcleo de personagens é insuportável e não parece haver perigo real na ilha inventada da vez. ILHA, o nome é MUNDO dos dinossauros e o filme se passa em uma ILHA. "+
+				   "A impressão que fica é a de mais um estúdio espremendo mais uma franquia até não sobrar nada, com decisões puramente comerciais que limitam o potencial que esse universo possui.", 
+        nota: 3.2 
     },
 	{ 
         tipo: "filmes", 
         titulo: "Amores Materialistas (2025)", 
         imagem: "img/amores.jpeg", 
-        descricao: "", 
-        nota: 0.0 
+        descricao: "Filmes de romance com teor mais realista e ácido não compõem uma categoria que pessoalmente me agrada e esse filme não mudou isso. "+
+		           "Não consegui torcer por nenhum dos personagens e fui pego no contrapé por uma subtrama que muda completamente o tom do filme. "+
+				   "A mensagem do filme fica bem clara: 'dinheiro e aparência não são tudo no relacionamento, mas são um bocado', mas, como dito antes, não é o tipo de mensagem que eu gosto em filmes românticos, principalmente executada dessa forma.", 
+        nota: 3.0 
     },
 	{ 
         tipo: "filmes", 
         titulo: "Coringa: Delírio a Dois (2024)", 
         imagem: "img/coringa.jpg", 
-        descricao: "", 
-        nota: 0.0 
+        descricao: "O vencedor do prêmio Morbius de pior do ano. A premissa não é necessariamente ruim, mas é pessimamente executada e se perde da mensagem que parecia querer passar. "+ 
+					"O filme não justifica seu elenco e nem sua existência como musical, com números esquecíveis que não ajudam na progressão da trama. "+
+					"Fiquei com uma sensação de decepção sobre algo que tinha um potencial para ser sim um bom filme.", 
+        nota: 2.0 
     },
 
 //jogos
@@ -356,8 +368,11 @@ const obras = [
         tipo: "jogos", 
         titulo: "Injustice 2 (2017)", 
         imagem: "img/injustice2.jpg", 
-        descricao: "", 
-        nota: 0.0 
+        descricao: "A injustiça já começa porque não sou fã de jogos de luta. O pouco que joguei com meus amigos foi a melhor parte, mas a maior parcela da experiência que tive foi no modo história. "+
+				   "Com relação a história em si, também não sou um grande fã do caminho que o universo de Injustice seguiu. Cheguei a ler o primeiro ano de publicação, e realmente acho o conceito de heróis malvadões um dia fez muito sentido. "+
+				   "Claro, a história nada mais é do que desculpas sucessivas para os personagens saírem no soco, mesmo com boa parte nem fazendo sentido. "+
+				   "Então, quanto às lutas, foi divertido. Como já foi dito, não é o meu gênero favorito, mas as mecânicas e diferenças nos de movimentos dos bonecos são interessantes e realmente acho que uma maior experiência pvp melhore significativamente o que acho desse jogo.", 
+        nota: 4.0 
     },
 	{ 
         tipo: "jogos", 
@@ -393,15 +408,20 @@ const obras = [
         tipo: "series", 
         titulo: "The Last of Us - 2º Temporada (2025)", 
         imagem: "img/tlouss.jpg", 
-        descricao: "", 
-        nota: 0.0 
+        descricao: "Essa série já esteve com uma nota mais alta para mim, daí eu joguei o jogo. Comparar as duas obras chega a ser desleal e, "+
+				   "embora eu saiba que fazer essa comparação entre mídias diferentes não seja adequado, pontos chaves como a motivação dos personagens e o tom da história são mudados sem justificativa. "+
+				   "Entendo que não quiseram copiar a obra original, mas nenhuma das mudanças feitas acaba agregando tanto na experiência. "+
+				   "Ainda acho a primeira temporada muito boa e tenho esperança para a terceira, pois essa segunda parte teve sim bons momentos, possui um bom elenco e ótima qualidade técnica.", 
+        nota: 3.1 
     },
 	{ 
         tipo: "series", 
         titulo: "LEGO Star Wars: Reconstruir a Galáxia - 2º Temporada (2025)", 
         imagem: "img/lego.jpg", 
-        descricao: "", 
-        nota: 0.0 
+        descricao: "Não é ruim, mas não é bom, o que vindo de Star Wars ultimamente já é uma grande conquista. A temporada é bem curta e acaba servindo de tibuto ao universo da franquia. "+
+				   "O que me gerou bons momentos nesses 4 episódios é que pude brevemente retornar aos momentos de infância nos quais eu fazia uma bagunça de conceitos ao brincar com meus Legos, em sua maioria, de Star Wars. "+
+				   "Tirando a questão emocional, essa série como um todo fica como uma boa nota de rodapé na franquia e, diferente de muitas outras coisas dessa galáxia muito distante, fico grato que exista.", 
+        nota: 5.0 
     },
 	{ 
         tipo: "series", 

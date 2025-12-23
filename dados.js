@@ -128,7 +128,7 @@ const obras = [
     },
 	{ 
         tipo: "filmes", 
-        titulo: "Jurado Nº2", 
+        titulo: "Jurado Nº2 (2024)", 
         imagem: "img/jurado.jpg", 
         descricao: "", 
         nota: 0.0 
@@ -191,43 +191,71 @@ const obras = [
     },
 	{ 
         tipo: "filmes", 
-        titulo: "", 
-        imagem: "img/", 
+        titulo: "Corra que a Polícia Vem Aí! (2025)", 
+        imagem: "img/policia.jpg", 
         descricao: "", 
         nota: 0.0 
     },
 	{ 
         tipo: "filmes", 
-        titulo: "", 
-        imagem: "img/", 
+        titulo: "O Mensageiro do Último Dia (2020)", 
+        imagem: "img/emptyman.jpg", 
         descricao: "", 
         nota: 0.0 
     },
 	{ 
         tipo: "filmes", 
-        titulo: "", 
-        imagem: "img/", 
+        titulo: "Quarteto Fantástico: Primeiros Passos (2025)", 
+        imagem: "img/quarteto.jpg", 
         descricao: "", 
         nota: 0.0 
     },
 	{ 
         tipo: "filmes", 
-        titulo: "", 
-        imagem: "img/", 
+        titulo: "Missão Impossível: O Acerto Final", 
+        imagem: "img/missao.png", 
         descricao: "", 
         nota: 0.0 
     },
 	{ 
         tipo: "filmes", 
-        titulo: "", 
-        imagem: "img/", 
+        titulo: "Obrigado por Fumar (2005)", 
+        imagem: "img/obrigado.jpg", 
         descricao: "", 
         nota: 0.0 
     },
 	{ 
         tipo: "filmes", 
-        titulo: "", 
-        imagem: "img/", 
+        titulo: "O Casamento do Meu Melhor Amigo (1997)", 
+        imagem: "img/casamento.jpg", 
+        descricao: "", 
+        nota: 0.0 
+    },
+	{ 
+        tipo: "filmes", 
+        titulo: "Magnólia (1999)", 
+        imagem: "img/magnolia.png", 
+        descricao: "", 
+        nota: 0.0 
+    },
+	{ 
+        tipo: "filmes", 
+        titulo: "Jurassic World Rebirth (2025)", 
+        imagem: "img/jurassic.jpg", 
+        descricao: "", 
+        nota: 0.0 
+    },
+	{ 
+        tipo: "filmes", 
+        titulo: "Amores Materialistas (2025)", 
+        imagem: "img/amores.jpeg", 
+        descricao: "", 
+        nota: 0.0 
+    },
+	{ 
+        tipo: "filmes", 
+        titulo: "Coringa: Delírio a Dois (2024)", 
+        imagem: "img/coringa.jpg", 
         descricao: "", 
         nota: 0.0 
     }

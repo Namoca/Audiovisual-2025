@@ -365,6 +365,56 @@ const obras = [
         imagem: "img/fallout4.jpg", 
         descricao: "", 
         nota: 0.0 
-    }
+    },
 	
+//series
+	{ 
+        tipo: "series", 
+        titulo: "DAN DA DAN - 2º Temporada (2025)", 
+        imagem: "img/dandadan.jpg", 
+        descricao: "", 
+        nota: 0.0 
+    },
+	{ 
+        tipo: "series", 
+        titulo: "Steins Gate (2011)", 
+        imagem: "img/steins.jpg", 
+        descricao: "", 
+        nota: 0.0 
+    },
+	{ 
+        tipo: "series", 
+        titulo: "Avatar: A Lenda de Aang(2005 - 2008)", 
+        imagem: "img/atla.jpg", 
+        descricao: "", 
+        nota: 0.0 
+    },
+	{ 
+        tipo: "series", 
+        titulo: "The Last of Us - 2º Temporada (2025)", 
+        imagem: "img/tlouss.jpg", 
+        descricao: "", 
+        nota: 0.0 
+    },
+	{ 
+        tipo: "series", 
+        titulo: "LEGO Star Wars: Reconstruir a Galáxia - 2º Temporada (2025)", 
+        imagem: "img/lego.jpg", 
+        descricao: "", 
+        nota: 0.0 
+    },
+	{ 
+        tipo: "series", 
+        titulo: "Buffy, a Caça-Vampiros - Temporadas 1-3 (1997-1999)", 
+        imagem: "img/buffy.jpeg", 
+        descricao: "", 
+        nota: 0.0 
+    },
+	{ 
+        tipo: "series", 
+        titulo: "Andor - 2º Temporada (2025)", 
+        imagem: "img/andor.jpeg", 
+        descricao: "", 
+        nota: 0.0 
+    }
 ];

@@ -109,43 +109,55 @@ const obras = [
         tipo: "filmes", 
 		titulo: "Truque de Mestre - O 3º Ato (2025)", 
         imagem: "img/truque.jpeg", 
-        descricao: "", 
-        nota: 0.0 
+        descricao: "'Plot Twist: O Filme parte 3' seria um título mais adequado. Sendo uma obra sobre mágica, faz total sentido abusar de diversas viradas e ele faz isso de maneira mais consistente que os anteriores, "+
+		           "com a virada final conseguindo justificar as pequenas conveniências ao longo da rodagem. Eu amo mágica, conheço relativamente bem esse universo e digo que esse filme incorpora bem a essência de que mágica não é só o truque, "+
+				   "é como apresentá-lo da maneira mais cativante e criativa possível.", 
+        nota: 7.1 
     },
 	{ 
         tipo: "filmes", 
         titulo: "A Entrevista (2014)", 
         imagem: "img/a_entrevista.jpg", 
-        descricao: "", 
-        nota: 0.0 
+        descricao: "Besteirol de alto nível. O fato desse filme existir já é inacreditável. Para quem nunca ouviu falar, o James Franco e o seu fiel escudeiro, Seth Rogen, "+
+		           "vão simplesmente entrevistar o líder norte coreano, virando parças dele no processo. Se fosse só isso já seria absurdo, mas eles ainda são encarregados da missão secreta de assassiná-lo. "+
+				   "A partir dessa sinospse o filme entrega o esperado, idiotice em todos os níveis, com uma dupla/trio que se afunda cada vez mais em desconfiança. Eu achei muito engraçado, só é imbecíl demais em alguns momentos para estar mais alto nesse ranking.",  
+        nota: 6.7 
     },
     { 
         tipo: "filmes", 
         titulo: "Em Ritmo de Fuga (2017)", 
         imagem: "img/em_ritmo.jpg", 
-        descricao: "", 
-        nota: 0.0 
+        descricao: "Com uma das melhores cenas de abertura já feitas, o filme é impecável até a loucura que se torna o terceiro ato. O destaque óbvio vai para as cenas musicais, "+
+		           "sejam perseguições de carro ou apenas o protagonista indo comprar café. Essas cenas dão alma para o que seria só mais uma história de roubo, que agora carrega o carisma da sua playlist favorita.", 
+        nota: 7.5 
     },
 	{ 
         tipo: "filmes", 
         titulo: "Jurado Nº2 (2024)", 
         imagem: "img/jurado.jpg", 
-        descricao: "", 
-        nota: 0.0 
+        descricao: "Angústia é a palavra que melhor representa o filme para mim. Não há muito o que dizer, a situação do protagonista me manteve vidrado na tela. Imagine o seguinte: "+
+		           "você é chamado para compor um júri de um homem acusado de assassinato, mas descobre que esse homem é inocente, porque foi você quem cometeu o crime por acidente, mas o homem parece ser uma pessoa ruim, "+
+				   "mas talvez você não seja preso, já que foi um acidente, mas sua esposa está grávida. E esses 'mas' seguem te fazendo pensar 'o que eu faria?'. Então assista e me diga, o que você faria?", 
+        nota: 7.6 
     },
     { 
         tipo: "filmes", 
         titulo: "Bingo: O Rei das Manhãs (2017)", 
         imagem: "img/bingo.jpg", 
-        descricao: "", 
-        nota: 0.0 
+        descricao: "Uma obra que sintetiza perfeitamente o famigerado 'jeitinho brasileiro'. Sim, é o Bozo, pelo menos fortemente baseado em um deles. Não chega a ser uma biografia, tendo boa parte adaptada para servir ao propósito narrativo. "+
+		           "O filme narra a trajetória de um ator em declínio que vê no papel do palhaço da televisão brasileira uma oportunidade de chegar ao derradeiro estrelato. "+
+				   "Para mim, o ponto alto dessa hitória são as ideias fora da caixa usadas para adaptar um personagem já famoso na gringa para o contexto nacional. Também achei bastante interessante a dinâmica familiar e o conflito entre fama e anonimato. "+
+				   "Apenas para apontar um defeito, achei o final rápido demais, com uma epifania quase repentina, mas sem estragar a experiência que garantiu um lugar entre meus filmes nacionais favoritos.", 
+        nota: 7.2
     },
 	{ 
         tipo: "filmes", 
         titulo: "Orgulho e Preconceito e Zumbis (2016)", 
         imagem: "img/orgulho.jpeg", 
-        descricao: "", 
-        nota: 0.0 
+        descricao: "Considerando o título, sinopse e 10 primeiros minutos, parece que vai ser uma das maiores bobagens que você vai ver na vida e, mesmo sendo, é incrivelmente bom. "+
+		           "O esqueleto ainda é o mesmo da história original, mas o novo contexto (zumbis) dá um ar novo, único e divertido para essa releitura. As cenas de ação são bem realizadas e os mortos-vivos realmente acrescentam na narrativa. "+
+				   "A obra original ainda está lá, só misturada com 'Madrugada dos Mortos' e uma pitada de 'Meu Namorado é um Zumbi', criando belas 1h48min de entretenimento.", 
+        nota: 6.6 
     },
 	{ 
         tipo: "filmes", 
@@ -161,29 +173,35 @@ const obras = [
         tipo: "filmes", 
         titulo: "Diário de uma Paixão (2004)", 
         imagem: "img/diario.jpeg", 
-        descricao: "", 
-        nota: 0.0 
+        descricao: "Foi-me vendido como O filme de romance e não acho que está muito distante disso. Ser um filme de época o torna atemporal, mas o que realmente me emocionou foram as cenas no 'presente'. "+
+		           "Gostei da dinâmica crua de amor verdadeiro e situacional e como não saber diferenciar entre os dois traz as maiores feridas. E tem o Ryan Gosling, o que faz eu me identificar muito mais.", 
+        nota: 7.4 
     },
 	{ 
         tipo: "filmes", 
         titulo: "A Garota Ideal (2007)", 
         imagem: "img/a_garota.jpg", 
-        descricao: "", 
-        nota: 0.0 
+        descricao: "Quem poderia imaginar que o Ryan Gosling comprando uma companheira de silicone geraria um filme tão fofo e profundo. A chave é que não é sobre 'silicone', é sobre 'companheira'. "+
+		           "Sim, parece estranho, mas para uma obra sobre uma boneca sexual, ela não encosta no aspecto carnal, focando na parte emocional de um homem que precisa lidar com inseguranças, solidão e medo de mudança. "+
+				   "Além disso, é sobre como as pessoas a sua volta podem te ajudar a superar esses problemas, como julgamentos são superficiais e o que realmente importa é ser um ser humano gentil e empático.", 
+        nota: 7.0 
     },
 	{ 
         tipo: "filmes", 
         titulo: "Donnie Darko (2001)", 
         imagem: "img/donnie.jpg", 
-        descricao: "", 
-        nota: 0.0 
+        descricao: "Donnie Darko não é um filme, é uma experiência. Faz parte precisar assistir a um vídeo de uma hora do Rolandinho e do Bruno Brock explicando o que você acabou de ver. E mesmo assim continuei com alguns questionamentos. "+
+		           "Realmente duvido que todas as cenas de fato se conectem e façam sentido completo e é aí que está a graça, montar uma segunda história dentro de sua própria cabeça para justificar e conectar o máximo possível de pontos aparentemente desconexos. "+
+				   "Apesar das loucuras, o filme não me perdeu por nenhum momento e continuou me prendendo por horas refletindo sobre seus significados. Posso estar sendo brutalmente enganado por algo que só não faz sentido? Posso e, nesse caso, não me importo.", 
+        nota: 7.3 
     },
 	{ 
         tipo: "filmes", 
         titulo: "Ace Ventura: Um Detetive Diferente (1994)", 
         imagem: "img/ace.jpg", 
-        descricao: "", 
-        nota: 0.0 
+        descricao: "Ace Ventura foi uma surpresa divertida. Honestamente, não achei que acharia graça, mas, felizmente, estava redondamente enganado. Jim Carrey sendo Jim Carrey proporciona momentos Jim Carrey. E eu gosto do Jim Carrey. "+
+		           "Por algum motivo que nunca parei para pensar, os gêneros de investigação e comédia funcionam bem juntos, provavelmente porque a investigação conduz a história e gera situações inusitadas, enquanto a comédia aproveita os ganchos e dá alma para o projeto." , 
+        nota: 6.2 
     },
 	{ 
         tipo: "filmes", 
@@ -208,15 +226,18 @@ const obras = [
         tipo: "filmes", 
         titulo: "O Mensageiro do Último Dia (2020)", 
         imagem: "img/emptyman.jpg", 
-        descricao: "", 
-        nota: 0.0 
+        descricao: "Um bom terror lovecraftiano. Sinto que esse tive maior apego com esse filme porque ele sintetizou bem a experiência que é jogar uma campanha de Call of Cthulhu. "+
+				   "Trata-se de uma investigação que mergulha gradualmente no horror cósmico, questionando a realidade e moralidade do protagonista. "+
+				   "A obra traz momentos tensos e macabros rodeados de uma atmosfera mística e sombria e, apesar do teor sobrenatural, o mistério não tira fortemente os pés do chão até os momentos seus momentos finais.", 
+        nota: 6.3 
     },
 	{ 
         tipo: "filmes", 
         titulo: "Quarteto Fantástico: Primeiros Passos (2025)", 
         imagem: "img/quarteto.jpg", 
-        descricao: "", 
-        nota: 0.0 
+        descricao: "Eu nunca fui um grande fã do Quarteto Fantástico e esse fato pesou bastante na minha visão sobre o filme. Atores bons interpretando personagens bons com roteiro bom, uma boa estética e um bom dilema. "+
+		           "Realmente não acho que tenha muito a dizer. Ele é bom, ainda mais em comparação com os últimos deslizes da dona Marvel, só não me pegou como outras obras que vi esse ano. ", 
+        nota: 6.5 
     },
 	{ 
         tipo: "filmes", 
@@ -231,8 +252,10 @@ const obras = [
         tipo: "filmes", 
         titulo: "Obrigado por Fumar (2005)", 
         imagem: "img/obrigado.jpg", 
-        descricao: "", 
-        nota: 0.0 
+        descricao: "O filme traz uma mensagem sobre trazer mensagens. Achei bastante interessante o jeito que ele abusa de técnicas de discurso para expor que não é a ideia que importa, é quem a defende e como a defende. "+
+				   "Ele tem momentos criativos, com montagens dinâmicas e narração em terceira pessoa, com um protagonista carismático com índole muito duvidosa. A trama também desenrola um conflito familiar que vai questionar suas atitudes, "+
+				   "uma escolha interessante para trabalhar o auto-convencimento como única forma de mudança de opinião, afinal, não preciso estar certo, só preciso mostrar que você está errado.",
+        nota: 6.0 
     },
 	{ 
         tipo: "filmes", 
@@ -284,6 +307,13 @@ const obras = [
         tipo: "jogos", 
         titulo: "Batman: Arkham City (2011)", 
         imagem: "img/batman.jpg", 
+        descricao: "", 
+        nota: 0.0 
+    },
+	{ 
+        tipo: "jogos", 
+        titulo: "Shadow of the Colossus (2005)", 
+        imagem: "img/colossu.jpg", 
         descricao: "", 
         nota: 0.0 
     },
@@ -372,8 +402,10 @@ const obras = [
         tipo: "jogos", 
         titulo: "Resident Evil 3 Remake (2020)", 
         imagem: "img/re3.jpg", 
-        descricao: "", 
-        nota: 0.0 
+        descricao: "O jogo inteiro é uma grande boss battle contra o Nemesis. O que acho que poderia ser melhor aproveitado como o Mr. X no jogo anterior. Penso isso porque os encontros são roteirizados, "+
+				   "o que tira um pouco do tom de urgência que um inimigo perseguidor poderia ter. O caos da cidade também é pouco aproveitado em relação ao jogo original. "+
+				   "Apesar desses dois pontos, o jogo não perde o tom de urgência e a recorrência do vilão transforma o medo em raiva, aproveitada de forma apoteótica no final. As mecânicas seguem aquelas do jogo anterior, o que possibilita uma gameplay fluida e dinâmica.", 
+        nota: 6.1
     },
 	{ 
         tipo: "jogos", 
@@ -403,10 +435,13 @@ const obras = [
     },
 	{ 
         tipo: "series", 
-        titulo: "Steins Gate (2011)", 
+        titulo: "Steins;Gate (2011)", 
         imagem: "img/steins.jpg", 
-        descricao: "", 
-        nota: 0.0 
+        descricao: "Viagem no tempo, mistério, decisões morais difíceis e personagens marcantes, isso é Steins Gate. Para mim, há dois picos na escrita desse anime, o modo experimental como é feita a viegam no tempo e nosso 'mad scientist Hououin Kyouma'. "+
+		           "Como ponto baixo, a série foi baseada em uma visual novel jogável e o ritmo acabou não sendo tão bem adaptado, causando repetição e lentidão em vários momentos. Então a experiência acaba sendo carregada por ótimos momentos espaçados por certos marasmos. "+
+				   "Caso não tivesse me conectado a um dos personagens, não sei se teria chegado ao final, mas não foi o caso. Eles são todos arismáticos e interessantes dentro dos próprios estereótipos, o que acarreta em decisões difíceis que comprometem a linha do tempo. "+
+				   "No fundo, essas decisões e como elas mudam tanto os personagens quanto o mundo a sua volta são a alma da história fazem do próprio espço tempo um persongem.",
+        nota: 6.4 
     },
 	{ 
         tipo: "series", 

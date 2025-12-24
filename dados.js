@@ -314,8 +314,9 @@ const obras = [
         tipo: "jogos", 
         titulo: "Shadow of the Colossus (2005)", 
         imagem: "img/colossu.jpg", 
-        descricao: "", 
-        nota: 0.0 
+        descricao: "Épico pelo épico. O nome é épico, a proposta é épica, os combates são épicos, os cenários são épicos, ir do ponto A ao ponto B é épico, tudo é épico. O jogo é isso, ir até cada um dos 16 bosses e derrotá-los. "+
+		           "Cada um deles vai ter sua prórpia movimentação e estratégia fazendo com que cada confronto seja mais um puzzle do que um combate direto, o que torna essa obra única com uma atmosfera grandiosa que faz você se sentir poderoso, mesmo sendo muito pequeno.", 
+        nota: 7.7 
     },
 	{ 
         tipo: "jogos", 
@@ -473,8 +474,10 @@ const obras = [
         tipo: "series", 
         titulo: "Buffy, a Caça-Vampiros - Temporadas 1-3 (1997-1999)", 
         imagem: "img/buffy.jpeg", 
-        descricao: "", 
-        nota: 0.0 
+        descricao: "Suco da virada do milênio, Buffy é muito mais que uma série adolescente, conseguindo tocar em temas muito profundos, seja em arcos mais longos ou apenas em um único episódio. "+
+		           "Seguimos a dinâmica de 'monstro do dia' enquanto há uma trama maior ao longo da temporada com cada episódio trazendo uma virada interessante, subvertendo estereótipos e clichês do gênero. "+
+				   "Outro ponto muito importante são os personagens, todos carismáticos e bem escritos, elevando o simples drama adolescente para algo mais relacionável e real.", 
+        nota: 7.8 
     },
 	{ 
         tipo: "series", 

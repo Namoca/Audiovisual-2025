@@ -46,15 +46,19 @@ const obras = [
         tipo: "filmes", 
         titulo: "Entrevista com o Vampiro (1994)", 
         imagem: "img/entrevista_com.jpeg", 
-        descricao: "", 
-        nota: 0.0 
+        descricao: "A história da vida de alguém que não pode morrer. A história segue três personagens que formam uma espécie de 'família vampírica'. Lestat (Tom Cruise) esbanja ao máximo de sua condição, "+
+		"sem remorso ou âncora moral, enquanto Louis (Brad Pitt) e Claudia (Kirsten Dunst) sofrem com ela, Louis por ter que lidar com arrependimento e luto e Claudia por estar eternamente presa em um corpo de criança. "+
+		"O filme então segue nessa discussão sobre a verdadeira natureza de um vampiro, se é uma bênção de imortalidade e poder ou uma maldição de punição e restrição.", 
+        nota: 8.2 
     },
     { 
         tipo: "filmes", 
         titulo: "O Grande Gatsby (2013)", 
         imagem: "img/gatsby.jpg", 
-        descricao: "", 
-        nota: 0.0 
+        descricao: "Dinheiro não traz felicidade, esse é um dos temas abordados. Amor também não traz, esse é outro. Essa história de época representa muito bem a extravagância e luxúria dos anos 1920 nos EUA, afinal, a obra original é um livro de 1925. "+
+		           "Para mim, o mais interessante é que tudo é narrado pelo ponto de vista de um personagem inicialmente alheio a esse mundo luxuoso e dispendioso. Ele torna-se amigo desse grande bilionário que dá nome ao filme e descobre a sua verdadeira motivação: ficar com a prima do narrador. "+
+				   "Esse romance proibido (ela é casada) guia a trama e mostra como, apesar de todo o poder conquistado, as aparências e vaidade se sobressaem.", 
+        nota: 8.4 
     },
 	{ 
         tipo: "filmes", 
@@ -78,39 +82,43 @@ const obras = [
         imagem: "img/blade_runner.jpg", 
         descricao: "Clássico do sci-fi que apresenta um futuro altamente tecnológico e, ao mesmo tempo, decadente. A opressora Los Angeles do distante ano de 2019 é um personagem à parte, que define o tom melancólico e solitário da obra. "+
 		           "A busca por propósito, que se confunde com a busca pela própria vida, desenha uma linha tênue que separa o caçador de suas presas replicantes que não são humanos. Eles possuem sentimentos, ambição e empatia, eles choram, mas não são humanos. ",
-        nota: 8.3
+        nota: 8.7
 		
     },
     { 
         tipo: "filmes", 
         titulo: "Kung Fury (2015)", 
         imagem: "img/kung_fury.png", 
-        descricao: "", 
-        nota: 0.0 
+        descricao: "Ação extrapolada na centésima potência. São 31 minutos de cenas emocionantes e frenéticas com uma história absurda que envolve viagem no tempo, dinossauros, deuses nórdicos e o cara do bigodinho, o Kung Führer. "+
+		           "As sequências de ação são inacreditavelmente bem feitas. Fiquei empolgado do início ao fim e nem o baixo orçamento conseguiu me tirar do filme. As decisões de como usar o valor de produção foram muito acertadas, fazendo a tosqueira dar ainda mais identidade ao filme. "+
+				   "Está no YouTube, assistam ou o Kung Fury irá atrás de vocês.", 
+        nota: 8.5 
     },
 	{ 
         tipo: "filmes", 
         titulo: "O Senhor das Armas (2005)", 
         imagem: "img/armas.jpg", 
         descricao: "Para mim, um dos melhores do nosso Nic Cage, que entrega uma excelente atuação de um protagonista com moral tão questionável. "+
-				   "O filme aborda a frieza que os verdadeiros senhores da guerra possuem pois, para eles, são apenas negócios. Eu adoro a estrutura que filmes como esse utilizam: "+
+				   "O filme aborda a frieza que os verdadeiros senhores da guerra possuem, pois, para eles, são apenas negócios. Eu adoro a estrutura que filmes como esse utilizam: "+
 				   "uma narração em retrospecto passando por momentos chave de um período da vida do personagem. Gosto de ver as ações e desenrolares, auge e queda, embora esse filme mostre que, embora merecida, nem sempre exista uma derradeira queda. ", 
         nota: 7.7 
     },
     { 
         tipo: "filmes", 
-        titulo: "Sonic 3 (2024S)", 
+        titulo: "Sonic 3 (2024)", 
         imagem: "img/sonic3.jpg", 
-        descricao: "", 
-        nota: 0.0 
+        descricao: "Primeiramente, o Shadow cara! Assisti a esse filme no cinema com dois amigos. Durante a primeira metade, estávamos rindo das bobagens e piadas bem encaixadas do Jim Carrey. Durante a segunda, estávamos compenetrados em uma história sobre "+
+		           "frustração, luto e propósito de vida. O tom da obra é muito bem acertado com uma trama fluida que não gasta tempo de tela com dilemas desinteressantes dos humanos. É engraçado, leve e emocionante, com uma das melhores cenas de luta que já vi na grande tela.", 
+        nota: 8.3 
     },
 	{ 
         tipo: "filmes", 
         titulo: "Cisne Negro (2010)", 
         imagem: "img/cisne.jpg", 
-        descricao: "Esse filme não tem defeitos, só não é o meu tipo de filme. Natalie Portman entrega brilhantemente uma persongem em metamorfose, o delicado e inocente cisne branco transformando-se no impulsivo e sedutor cisne negro. "+
-		           "O cenário do ballet como palco para a história gera um ambiente corrosivo, repleto de expectativa, abuso e entrega que consome a protagonista na busca pela perfeição a todo custo. Recebemos momentos tensos e de confusão, que questionam a verdadeira motivação dos personagens e a realidade ao redor deles.",
-        nota: 8.2 
+        descricao: "Esse filme não tem defeitos, só não é o meu tipo de filme. Natalie Portman entrega brilhantemente uma personagem em metamorfose, o delicado e inocente cisne branco transformando-se no impulsivo e sedutor cisne negro. "+
+		           "O cenário do ballet como palco para a história gera um ambiente corrosivo, repleto de expectativa, abuso e entrega que consome a protagonista na busca pela perfeição a todo custo. Recebemos momentos tensos e de confusão, "+
+				   "que questionam a verdadeira motivação dos personagens e a realidade ao redor deles.",
+        nota: 8.6 
     },
     { 
         tipo: "filmes", 
@@ -127,7 +135,7 @@ const obras = [
         imagem: "img/a_entrevista.jpg", 
         descricao: "Besteirol de alto nível. O fato desse filme existir já é inacreditável. Para quem nunca ouviu falar, o James Franco e o seu fiel escudeiro, Seth Rogen, "+
 		           "vão simplesmente entrevistar o líder norte coreano, virando parças dele no processo. Se fosse só isso já seria absurdo, mas eles ainda são encarregados da missão secreta de assassiná-lo. "+
-				   "A partir dessa sinospse o filme entrega o esperado, idiotice em todos os níveis, com uma dupla/trio que se afunda cada vez mais em desconfiança. Eu achei muito engraçado, só é imbecíl demais em alguns momentos para estar mais alto nesse ranking.",  
+				   "A partir dessa sinopse o filme entrega o esperado, idiotice em todos os níveis, com uma dupla/trio que se afunda cada vez mais em desconfiança. Eu achei muito engraçado, só é imbecil demais em alguns momentos para estar mais alto nesse ranking.",  
         nota: 6.7 
     },
     { 
@@ -153,7 +161,7 @@ const obras = [
         imagem: "img/bingo.jpg", 
         descricao: "Uma obra que sintetiza perfeitamente o famigerado 'jeitinho brasileiro'. Sim, é o Bozo, pelo menos fortemente baseado em um deles. Não chega a ser uma biografia, tendo boa parte adaptada para servir ao propósito narrativo. "+
 		           "O filme narra a trajetória de um ator em declínio que vê no papel do palhaço da televisão brasileira uma oportunidade de chegar ao derradeiro estrelato. "+
-				   "Para mim, o ponto alto dessa hitória são as ideias fora da caixa usadas para adaptar um personagem já famoso na gringa para o contexto nacional. Também achei bastante interessante a dinâmica familiar e o conflito entre fama e anonimato. "+
+				   "Para mim, o ponto alto dessa história são as ideias fora da caixa usadas para adaptar um personagem já famoso na gringa para o contexto nacional. Também achei bastante interessante a dinâmica familiar e o conflito entre fama e anonimato. "+
 				   "Apenas para apontar um defeito, achei o final rápido demais, com uma epifania quase repentina, mas sem estragar a experiência que garantiu um lugar entre meus filmes nacionais favoritos.", 
         nota: 7.2
     },
@@ -171,7 +179,7 @@ const obras = [
         titulo: "Rivais (2024)", 
         imagem: "img/rivais.jpeg", 
         descricao: "Demorei muito para entender que era um filme sobre broderagem. Honestamente, vi o filme uma vez em janeiro e não reassisti, então não lembro suficientemente bem dele para uma análise mais profunda. " +
-		           "Talvez por isso esteja tão baixo, é esquecível. Durante a assistida, fiquei curioso com uma parte do filme que não era o foco, que encerra de maneira mais subjetiva em comparação com a linha pricipal que eu só saquei que tava lá no final. "+
+		           "Talvez por isso esteja tão baixo, é esquecível. Durante a assistida, fiquei curioso com uma parte do filme que não era o foco, que encerra de maneira mais subjetiva em comparação com a linha principal que eu só saquei que tava lá no final. "+
 				   "Sim, tinha várias passagens dessa trama que eu não as valorizei o suficiente porque queria saber quem ganharia a partida e se uma certa personagem plantaria o que cultivou. "+
 				   "Em geral, o ritmo, direção e atuação são bons, mas nada que realmente tenha me marcado de alguma forma.", 
         nota: 5.1 
@@ -190,7 +198,7 @@ const obras = [
         imagem: "img/a_garota.jpg", 
         descricao: "Quem poderia imaginar que o Ryan Gosling comprando uma companheira de silicone geraria um filme tão fofo e profundo. A chave é que não é sobre 'silicone', é sobre 'companheira'. "+
 		           "Sim, parece estranho, mas para uma obra sobre uma boneca sexual, ela não encosta no aspecto carnal, focando na parte emocional de um homem que precisa lidar com inseguranças, solidão e medo de mudança. "+
-				   "Além disso, é sobre como as pessoas a sua volta podem te ajudar a superar esses problemas, como julgamentos são superficiais e o que realmente importa é ser um ser humano gentil e empático.", 
+				   "Além disso, é sobre como as pessoas à sua volta podem te ajudar a superar esses problemas, como julgamentos são superficiais e o que realmente importa é ser um ser humano gentil e empático.", 
         nota: 7.0 
     },
 	{ 
@@ -216,7 +224,7 @@ const obras = [
         imagem: "img/mickey.jpeg", 
         descricao: "Eu adorei Parasita, adoro o Robert Pattinson, adoro ficção científica e adorei a premissa. Deve ser por isso que esse filme acabou sendo tão decepcionante. "+
 				   "Primeiro que não parece um filme, parece dois filmes misturados, ligados por uma 'crítica social f#da'. Eu gostei das duas tramas e gostei da crítica, apesar de não achar que a junção final acabou muito bem. "+
-				   "Não faço ideia do quanto disso já estava presente no livro, então considerando o que vi: Robert Pattinson está muito bem no filme, os conceitos de ficção e política apresentdos são bons, mas as peças não se encaixam da melhor maneira.", 
+				   "Não faço ideia do quanto disso já estava presente no livro, então considerando o que vi: Robert Pattinson está muito bem no filme, os conceitos de ficção e política apresentados são bons, mas as peças não se encaixam da melhor maneira.", 
         nota: 4.4 
     },
 	{ 
@@ -224,9 +232,9 @@ const obras = [
         titulo: "Corra que a Polícia Vem Aí! (2025)", 
         imagem: "img/policia.jpg", 
         descricao: "Eu ri muito e ri alto. Eu adoro o gênero de comédia pastelão com situações e personagens mais que absurdos. "+
-		           "O filme emplaca boas piadas que se alternam com outras não tão bem encaixadas, seja por se prologarem demais ou por só funcionarem para o público norte americano"+
+		           "O filme emplaca boas piadas que se alternam com outras não tão bem encaixadas, seja por se prolongarem demais ou por só funcionarem para o público norte-americano"+
 				   ", porém sem comprometer completamente nenhum dos atos. Não há um longo período sem risadas. "+
-				   "Não acho que esteja no mesmo nível do original, mas traz um bom respiro para ese gênero abandonado nos últimos anos.", 
+				   "Não acho que esteja no mesmo nível do original, mas traz um bom respiro para esse gênero abandonado nos últimos anos.", 
         nota: 5.4 
     },
 	{ 
@@ -235,7 +243,7 @@ const obras = [
         imagem: "img/emptyman.jpg", 
         descricao: "Um bom terror lovecraftiano. Sinto que esse tive maior apego com esse filme porque ele sintetizou bem a experiência que é jogar uma campanha de Call of Cthulhu. "+
 				   "Trata-se de uma investigação que mergulha gradualmente no horror cósmico, questionando a realidade e moralidade do protagonista. "+
-				   "A obra traz momentos tensos e macabros rodeados de uma atmosfera mística e sombria e, apesar do teor sobrenatural, o mistério não tira fortemente os pés do chão até os momentos seus momentos finais.", 
+				   "A obra traz momentos tensos e macabros rodeados de uma atmosfera mística e sombria e, apesar do teor sobrenatural, o mistério não tira fortemente os pés do chão até seus momentos finais.", 
         nota: 6.3 
     },
 	{ 
@@ -277,7 +285,7 @@ const obras = [
         titulo: "Magnólia (1999)", 
         imagem: "img/magnolia.png", 
         descricao: "Eu não entendi esse filme. É a única expliação para eu não ter gostado. O elenco é estreladíssimo e entrega cenas muito bonitas e verdadeiras. "+
-				   "Meu problema com o filme é esse, é tudo muito verdadeiro. Pessoas com problemas reais, agindo como pessoas reais. Eu quis domir, porque isso tudo não parecia estar indo para lugar nenhum. "+
+				   "Meu problema com o filme é esse, é tudo muito verdadeiro. Pessoas com problemas reais, agindo como pessoas reais. Eu quis dormir, porque isso tudo não parecia estar indo para lugar nenhum. "+
 				   "Provavelmente em alguns anos devo reassistir com uma bagagem que não tenho hoje e somente existir por mais tempo sobre a terra pode me trazer. Um spoiler: Chove sapo.", 
         nota: 4.1 
     },
@@ -314,15 +322,17 @@ const obras = [
         tipo: "jogos", 
         titulo: "Batman: Arkham City (2011)", 
         imagem: "img/batman.jpg", 
-        descricao: "", 
-        nota: 0.0 
+        descricao: "A notável evolução de Batman: Arkham Asylum, que já considero um jogo excelente. Estar em uma Gotham devastada, movido por um senso de urgência em uma investigação que "+
+		           "passa por sua famigerada galeria de vilões, enquanto precisa se camuflar nas sombras faz você se sentir o Batman. Eu gostei de ser o Batman, essa força imparável e genial "+
+				   "que se sacrifica para salvar a vida de milhares, algo muito bem proporcionado pelo jogo.",
+        nota: 8.8 
     },
 	{ 
         tipo: "jogos", 
         titulo: "Shadow of the Colossus (2005)", 
         imagem: "img/colossu.jpg", 
         descricao: "Épico pelo épico. O nome é épico, a proposta é épica, os combates são épicos, os cenários são épicos, ir do ponto A ao ponto B é épico, tudo é épico. O jogo é isso, ir até cada um dos 16 bosses e derrotá-los. "+
-		           "Cada um deles vai ter sua prórpia movimentação e estratégia fazendo com que cada confronto seja mais um puzzle do que um combate direto, o que torna essa obra única com uma atmosfera grandiosa que faz você se sentir poderoso, mesmo sendo muito pequeno.", 
+		           "Cada um deles vai ter sua própia movimentação e estratégia fazendo com que cada confronto seja mais um puzzle do que um combate direto, o que torna essa obra única com uma atmosfera grandiosa que faz você se sentir poderoso, mesmo sendo muito pequeno.", 
         nota: 7.81 
     },
 	{ 
@@ -345,7 +355,7 @@ const obras = [
         imagem: "img/tomb3.png", 
         descricao: "É um mais do mesmo cansativo. Os primeiros dois jogos da trilogia deixam um gostinho de quero mais, algo que se perde nesse terceiro. "+ 
 		           "Após terminá-lo, não tive vontade de ir atrás de qualquer outra obra de Tomb Raider. Avaliando somente o jogo em si, não há muito do que reclamar, porém não há inovação frente aos anteriores. "+
-				   "Mesma jogabilidade e dinâmicas com uma história menos involvente. Para quem gosta do gênero de aventura é um prato cheio...que já foi comido outras duas vezes.",
+				   "Mesma jogabilidade e dinâmicas com uma história menos envolvente. Para quem gosta do gênero de aventura é um prato cheio...que já foi comido outras duas vezes.",
         nota: 5.5 
     },
 	{ 
@@ -359,18 +369,18 @@ const obras = [
         tipo: "jogos", 
         titulo: "South Park: The Stick of Truth (2014)", 
         imagem: "img/stick.jpeg", 
-        descricao: "Sei que o humor de South Park não agrada a todos. Na maioria do tempo, ele me agrada. Esse jogo mistura muito bem aquela brincadeira de criança com as maiores loucuras imagináveis. A comédia utilizada é aquela que eu mais gosto: algo muito idiota levado muito a sério. "+
+        descricao: "Sei que o humor de South Park não agrada a todos. Na maioria do tempo, ele me agrada. Esse jogo mescla muito bem aquela brincadeira de criança com as maiores loucuras imagináveis. A comédia utilizada é aquela que eu mais gosto: algo muito idiota levado muito a sério. "+
 		           "Temos magia, facções, objetos extremamente poderosos e zumbis na*istas, tudo misturado do jeito mais caótico e satírico possível. A cidade se transforma em um vasto reino que dá vontade de explorar em uma jornada imersiva para se tornar uma lenda e salvar o mundo. "+
-				   "O jogo é muito envolvente, mesmo com todos os absurdos, e é impossível tentar explicar o que está acontecendo para alguém que entrou no cômodo agora e está vendo alienígenas sendo derrotados por uma criança desbocada com sobrepeso empunhando um graveto mágico.", 
+				   "O jogo é muito envolvente, mesmo com todos os absurdos, e é impossível tentar explicar o que está acontecendo para alguém que entrou no cômodo agora e está vendo alienígenas sendo derrotados por uma criança desbocada com sobrepeso empunhando um graveto mágico em um RPG de turnos.", 
         nota: 8.1 
     },
 	{ 
         tipo: "jogos", 
         titulo: "South Park: The Fractured But Whole (2017)", 
         imagem: "img/fractured.jpeg", 
-        descricao: "Sei que o humor de South Park não agrada a todos. Na maioria do tempo, ele me agrada. Esse jogo mistura muito bem aquela brincadeira de criança com as maiores loucuras imagináveis. A comédia utilizada é aquela que eu mais gosto: algo muito idiota levado muito a sério. "+
+        descricao: "Sei que o humor de South Park não agrada a todos. Na maioria do tempo, ele me agrada. Esse jogo mescla muito bem aquela brincadeira de criança com as maiores loucuras imagináveis. A comédia utilizada é aquela que eu mais gosto: algo muito idiota levado muito a sério. "+
 				   "Temos super-poderes, facções, objetos extremamente poderosos e viagem no tempo, tudo misturado do jeito mais caótico e satírico possível. A cidade se transforma em um território a ser protegido que dá vontade de explorar em uma jornada imersiva para se tornar o maior herói e salvar o mundo. "+
-				   "O jogo é muito envolvente, mesmo com todos os absurdos, e é impossível tentar explicar o que está acontecendo para alguém que entrou no cômodo agora e está vendo animais satânicos sendo derrotados por uma criança desbocada com sobrepeso fantasiada de guaxinim.",
+				   "O jogo é muito envolvente, mesmo com todos os absurdos, e é impossível tentar explicar o que está acontecendo para alguém que entrou no cômodo agora e está vendo animais satânicos sendo derrotados por uma criança desbocada com sobrepeso fantasiada de guaxinim em um RPG de grid.",
         nota: 8.0 
     },
 	{ 
@@ -399,7 +409,7 @@ const obras = [
         titulo: "Metroid Prime 3: Corruption (2007)", 
         imagem: "img/metroid.jpg", 
         descricao: "Cadê essa esquerda jogador?! Eu passei mais tempo perdido ou tentando ir por caminhos sem saída do que jogando de fato. Os mapas são labirínticos e não acho que seja de propósito. "+
-			       "Muitas vezes é preciso mudar de planeta para descobrir uma região inesplorada que eu podia jurar que não estava ali antes. Fora essa parte que me deixou muitas vezes frustado com minha incapacidade de localização, há muitos pontos positivos. "+
+			       "Muitas vezes é preciso mudar de planeta para descobrir uma região inexplorada que eu podia jurar que não estava ali antes. Fora essa parte que me deixou muitas vezes frustrado com minha incapacidade de localização, há muitos pontos positivos. "+
 				   "O combate é dinâmico, ainda mais usando os controles do Nintendo Wii, as mecânicas de exploração e inimigos são criativas e os designs com estética biomecânica dão um toque único para o universo do jogo.",
         nota: 5.3 
     },
@@ -426,15 +436,17 @@ const obras = [
         descricao: "A injustiça já começa porque não sou fã de jogos de luta. O pouco que joguei com meus amigos foi a melhor parte, mas a maior parcela da experiência que tive foi no modo história. "+
 				   "Com relação a história em si, também não sou um grande fã do caminho que o universo de Injustice seguiu. Cheguei a ler o primeiro ano de publicação, e realmente acho o conceito de heróis malvadões um dia fez muito sentido. "+
 				   "Claro, a história nada mais é do que desculpas sucessivas para os personagens saírem no soco, mesmo com boa parte nem fazendo sentido. "+
-				   "Então, quanto às lutas, foi divertido. Como já foi dito, não é o meu gênero favorito, mas as mecânicas e diferenças nos de movimentos dos bonecos são interessantes e realmente acho que uma maior experiência pvp melhore significativamente o que acho desse jogo.", 
+				   "Então, quanto às lutas, foi divertido. Como já foi dito, não é o meu gênero favorito, mas as mecânicas e diferenças nos movimentos dos bonecos são interessantes e realmente acho que uma maior experiência pvp melhore significativamente o que acho desse jogo.", 
         nota: 4.0 
     },
 	{ 
         tipo: "jogos", 
         titulo: "Fallout 4 (2015)", 
         imagem: "img/fallout4.jpg", 
-        descricao: "", 
-        nota: 0.0 
+        descricao: "Eu amo Skyrim e amo a estética atompunk do universo Fallout. Pois bem, é exatamente o que temos aqui. Horas de caminhada por uma terra devastada com pergigos a cada esquina. E eu acabo com eles com um Mini Nuke Launcher. "+
+		           "A dinâmica de escolhas entre facções e busca pelo próprio filho movem o jogador pelos quatro cantos do mapa com as mais diferentes paisagens. Há quem não goste, mas julgo que a mecânica de construir assentamentos traz um ar de "+
+				   "progresso e responsabilidade maior para a campanha.", 
+        nota: 8.81 
     },
 	
 //series
@@ -442,17 +454,19 @@ const obras = [
         tipo: "series", 
         titulo: "DAN DA DAN - 2º Temporada (2025)", 
         imagem: "img/dandadan.jpg", 
-        descricao: "", 
-        nota: 0.0 
+        descricao: "A espera pela segunda temporada valeu a pena. DAN DA DAN tem tudo: humor, aventura, romance, mistério, ação, música, excelentes personagens, alienígenas, espíritos, um sistema de poder muito interessante, "+
+		           "história envolvente, plot-twists, futebol, cenas de ação muito bem feitas, robôs gigantes, monstros gigantes, momentos emocionantes, momentos tristes, momentos hilários, momentos fofos, "+
+                   "um ritmo bom, ideias espertas para resolução de problemas, amizade, esforço e vitória. Entre outros.",			   
+        nota: 8.9 
     },
 	{ 
         tipo: "series", 
         titulo: "Steins;Gate (2011)", 
         imagem: "img/steins.jpg", 
-        descricao: "Viagem no tempo, mistério, decisões morais difíceis e personagens marcantes, isso é Steins Gate. Para mim, há dois picos na escrita desse anime, o modo experimental como é feita a viegam no tempo e nosso 'mad scientist Hououin Kyouma'. "+
+        descricao: "Viagem no tempo, mistério, decisões morais difíceis e personagens marcantes, isso é Steins Gate. Para mim, há dois picos na escrita desse anime, o modo experimental como é feita a viagem no tempo e nosso 'mad scientist Hououin Kyouma'. "+
 		           "Como ponto baixo, a série foi baseada em uma visual novel jogável e o ritmo acabou não sendo tão bem adaptado, causando repetição e lentidão em vários momentos. Então a experiência acaba sendo carregada por ótimos momentos espaçados por certos marasmos. "+
-				   "Caso não tivesse me conectado a um dos personagens, não sei se teria chegado ao final, mas não foi o caso. Eles são todos arismáticos e interessantes dentro dos próprios estereótipos, o que acarreta em decisões difíceis que comprometem a linha do tempo. "+
-				   "No fundo, essas decisões e como elas mudam tanto os personagens quanto o mundo a sua volta são a alma da história fazem do próprio espço tempo um persongem.",
+				   "Caso não tivesse me conectado a um dos personagens, não sei se teria chegado ao final, mas não foi o caso. Eles são todos carismáticos e interessantes dentro dos próprios estereótipos, o que acarreta em decisões difíceis que comprometem a linha do tempo. "+
+				   "No fundo, essas decisões e como elas mudam tanto os personagens quanto o mundo a sua volta são a alma da história fazem do próprio espaço tempo um personagem.",
         nota: 6.4 
     },
 	{ 
@@ -476,7 +490,7 @@ const obras = [
         tipo: "series", 
         titulo: "LEGO Star Wars: Reconstruir a Galáxia - 2º Temporada (2025)", 
         imagem: "img/lego.jpg", 
-        descricao: "Não é ruim, mas não é bom, o que vindo de Star Wars ultimamente já é uma grande conquista. A temporada é bem curta e acaba servindo de tibuto ao universo da franquia. "+
+        descricao: "Não é ruim, mas não é bom, o que vindo de Star Wars ultimamente já é uma grande conquista. A temporada é bem curta e acaba servindo de tributo ao universo da franquia. "+
 				   "O que me gerou bons momentos nesses 4 episódios é que pude brevemente retornar aos momentos de infância nos quais eu fazia uma bagunça de conceitos ao brincar com meus Legos, em sua maioria, de Star Wars. "+
 				   "Tirando a questão emocional, essa série como um todo fica como uma boa nota de rodapé na franquia e, diferente de muitas outras coisas dessa galáxia muito distante, fico grato que exista.", 
         nota: 5.0 

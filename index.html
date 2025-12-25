@@ -5,31 +5,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ranking Audiovisual Pro</title>
     <style>
-        :root { --primary: #ffd700; --bg-dark: #0a0a0a; --card-bg: #1a1a1a; --text-gray: #aaa; --transition: all 0.3s ease; }
+        :root { 
+            --primary: #ffd700; 
+            --bg-dark: #0a0a0a; 
+            --card-bg: #1a1a1a; 
+            --text-gray: #aaa; 
+            --transition: all 0.3s ease; 
+        }
         
-        body { font-family: 'Segoe UI', system-ui, sans-serif; background-color: var(--bg-dark); color: #eee; padding: 20px; margin: 0; }
+        body { 
+            font-family: 'Segoe UI', system-ui, sans-serif; 
+            background-color: var(--bg-dark); 
+            color: #eee; 
+            padding: 20px; 
+            margin: 0; 
+        }
         
-        /* Estilo da Propaganda Fixa */
-		.banner-container {
-			position: fixed; /* Faz seguir a tela */
-			bottom: 20px;    /* Distância do fundo da tela */
-			left: 50%;       /* Centraliza horizontalmente */
-			transform: translateX(-50%); /* Ajuste fino da centralização */
-			width: 90%;      /* Largura responsiva */
-			max-width: 500px;
-			background: #151515;
-			border: 2px solid var(--primary); /* Destaque opcional */
-			border-radius: 12px;
-			overflow: hidden;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			min-height: 80px;
-			z-index: 9999; /* Garante que fique acima de tudo */
-			box-shadow: 0 10px 30px rgba(0,0,0,0.8);
-			animation: surgimento 0.5s ease-out;
-		}
+        /* --- ESTILO VOLTAR AO TOPO --- */
+        #backToTop {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: var(--primary);
+            color: var(--bg-dark);
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 22px;
+            font-weight: bold;
+            display: none; /* Invisível inicialmente */
+            z-index: 10001;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+            transition: var(--transition);
+        }
+
+        #backToTop:hover {
+            transform: translateY(-5px);
+            background-color: #fff;
+        }
+
+        /* --- PROPAGANDA FIXA --- */
+        .banner-container {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            max-width: 500px;
+            background: #151515;
+            border: 2px solid var(--primary);
+            border-radius: 12px;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 80px;
+            z-index: 9999;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+            animation: surgimento 0.5s ease-out;
+        }
+
         .banner-container img { width: 100%; height: auto; display: block; max-height: 300px; object-fit: cover; }
+        
         .btn-fechar-ad {
             position: absolute;
             top: 10px;
@@ -48,24 +87,69 @@
             z-index: 10;
         }
 
+        /* --- LAYOUT GERAL --- */
         h1 { text-align: center; color: var(--primary); margin-bottom: 30px; padding: 0 10px; }
         
         .controles { max-width: 800px; margin: 0 auto 30px; text-align: center; padding: 0 10px; }
-        #busca { width: 100%; max-width: 400px; padding: 12px 20px; border-radius: 25px; border: 1px solid #333; background: #1a1a1a; color: white; outline: none; margin-bottom: 20px; box-sizing: border-box; }
+        
+        #busca { 
+            width: 100%; 
+            max-width: 400px; 
+            padding: 12px 20px; 
+            border-radius: 25px; 
+            border: 1px solid #333; 
+            background: #1a1a1a; 
+            color: white; 
+            outline: none; 
+            margin-bottom: 20px; 
+            box-sizing: border-box; 
+        }
         #busca:focus { border-color: var(--primary); }
         
         .botoes-container { display: flex; flex-direction: column; gap: 15px; align-items: center; }
         .grupo-botoes { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
         
-        button { background: #222; color: #eee; border: 1px solid #444; padding: 10px 16px; border-radius: 6px; cursor: pointer; transition: var(--transition); font-size: 0.9rem; }
+        button { 
+            background: #222; 
+            color: #eee; 
+            border: 1px solid #444; 
+            padding: 10px 16px; 
+            border-radius: 6px; 
+            cursor: pointer; 
+            transition: var(--transition); 
+            font-size: 0.9rem; 
+        }
         button:hover { background: #333; border-color: var(--primary); }
         
         .btn-inverter { background: #2a2a2a; border-color: #555; font-weight: bold; padding: 10px 20px; width: auto; }
 
-        .ranking { max-width: 850px; margin: auto; padding-bottom: 50px; }
-        .item { display: flex; align-items: stretch; gap: 20px; background: var(--card-bg); margin-bottom: 20px; padding: 15px; border-radius: 12px; border: 1px solid #2a2a2a; animation: surgimento 0.5s ease-out; transition: var(--transition); }
+        .ranking { max-width: 850px; margin: auto; padding-bottom: 100px; }
         
-        .posicao { display: flex; align-items: center; justify-content: center; font-size: 24px; font-weight: bold; color: var(--primary); min-width: 60px; border-right: 1px solid #333; padding-right: 10px; }
+        .item { 
+            display: flex; 
+            align-items: stretch; 
+            gap: 20px; 
+            background: var(--card-bg); 
+            margin-bottom: 20px; 
+            padding: 15px; 
+            border-radius: 12px; 
+            border: 1px solid #2a2a2a; 
+            animation: surgimento 0.5s ease-out; 
+            transition: var(--transition); 
+        }
+        
+        .posicao { 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            font-size: 24px; 
+            font-weight: bold; 
+            color: var(--primary); 
+            min-width: 60px; 
+            border-right: 1px solid #333; 
+            padding-right: 10px; 
+        }
+        
         .img-container { width: 120px; display: flex; align-items: center; justify-content: center; }
         .item img { width: 120px; height: 160px; object-fit: cover; border-radius: 8px; background: #222; }
         
@@ -83,6 +167,13 @@
         @media (max-width: 600px) {
             body { padding: 10px; }
             
+            #backToTop {
+                bottom: 110px; /* Sobe para não ficar atrás do banner fixo */
+                right: 20px;
+                width: 45px;
+                height: 45px;
+            }
+
             .grupo-botoes { 
                 display: grid; 
                 grid-template-columns: repeat(2, 1fr); 
@@ -108,12 +199,12 @@
 
             .img-container { width: 100%; }
             .item img { width: 140px; height: auto; }
-
-            .estrelas { justify-content: center; }
         }
     </style>
 </head>
 <body>
+
+<button id="backToTop" onclick="scrollToTop()" title="Voltar ao topo">↑</button>
 
 <div id="propaganda" class="banner-container">
     <button class="btn-fechar-ad" onclick="fecharPropaganda()" title="Fechar anúncio">×</button>
@@ -148,6 +239,25 @@
     let termoBusca = "";
     let visualizandoDisclaimer = false;
 
+    // --- FUNÇÕES DO BOTÃO VOLTAR AO TOPO ---
+    window.onscroll = function() {
+        const btn = document.getElementById("backToTop");
+        // Mostra o botão após descer 300px
+        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+            btn.style.display = "block";
+        } else {
+            btn.style.display = "none";
+        }
+    };
+
+    function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
+
+    // --- FUNÇÕES ORIGINAIS DO SITE ---
     function fecharPropaganda() {
         document.getElementById('propaganda').style.display = 'none';
     }

@@ -67,15 +67,19 @@ const obras = [
         tipo: "filmes", 
         titulo: "Drácula de Bram Stoker (1992)", 
         imagem: "img/dracula.jpg", 
-        descricao: "", 
-        nota: 0.0 
+        descricao: "Não sei se era o intuito, mas eu sempre torci para o 'vilão'. Gary Oldman destrói como esse monstro amaldiçoado que um dia foi um homem que renunciou a Deus após a morte de sua amada. "+
+		           "A obra segue um caminho fortemente religioso para poder usufruir do profano, com o vampirismo sendo algo carnal e profundamente emotivo, enquanto os humanos racionais tentam enfrentar essa ameaça quase imparável. "+
+				   "Contudo, em essência, é um romance, duas almas a muito separadas têm a chance de, enfim, se reconectarem. E também temos o Keanu Reeves brigando com as palavras.", 
+        nota: 7.8 
     },
 	{ 
         tipo: "filmes", 
         titulo: "Blade Runner - O Caçador de Androides (1982)", 
         imagem: "img/blade_runner.jpg", 
-        descricao: "", 
-        nota: 0.0 
+        descricao: "Clássico do sci-fi que apresenta um futuro altamente tecnológico e, ao mesmo tempo, decadente. A opressora Los Angeles do distante ano de 2019 é um personagem à parte, que define o tom melancólico e solitário da obra. "+
+		           "A busca por propósito, que se confunde com a busca pela própria vida, desenha uma linha tênue que separa o caçador de suas presas replicantes que não são humanos. Eles possuem sentimentos, ambição e empatia, eles choram, mas não são humanos. ",
+        nota: 8.3
+		
     },
     { 
         tipo: "filmes", 
@@ -88,8 +92,10 @@ const obras = [
         tipo: "filmes", 
         titulo: "O Senhor das Armas (2005)", 
         imagem: "img/armas.jpg", 
-        descricao: "", 
-        nota: 0.0 
+        descricao: "Para mim, um dos melhores do nosso Nic Cage, que entrega uma excelente atuação de um protagonista com moral tão questionável. "+
+				   "O filme aborda a frieza que os verdadeiros senhores da guerra possuem pois, para eles, são apenas negócios. Eu adoro a estrutura que filmes como esse utilizam: "+
+				   "uma narração em retrospecto passando por momentos chave de um período da vida do personagem. Gosto de ver as ações e desenrolares, auge e queda, embora esse filme mostre que, embora merecida, nem sempre exista uma derradeira queda. ", 
+        nota: 7.7 
     },
     { 
         tipo: "filmes", 
@@ -102,8 +108,9 @@ const obras = [
         tipo: "filmes", 
         titulo: "Cisne Negro (2010)", 
         imagem: "img/cisne.jpg", 
-        descricao: "", 
-        nota: 0.0 
+        descricao: "Esse filme não tem defeitos, só não é o meu tipo de filme. Natalie Portman entrega brilhantemente uma persongem em metamorfose, o delicado e inocente cisne branco transformando-se no impulsivo e sedutor cisne negro. "+
+		           "O cenário do ballet como palco para a história gera um ambiente corrosivo, repleto de expectativa, abuso e entrega que consome a protagonista na busca pela perfeição a todo custo. Recebemos momentos tensos e de confusão, que questionam a verdadeira motivação dos personagens e a realidade ao redor deles.",
+        nota: 8.2 
     },
     { 
         tipo: "filmes", 
@@ -316,7 +323,7 @@ const obras = [
         imagem: "img/colossu.jpg", 
         descricao: "Épico pelo épico. O nome é épico, a proposta é épica, os combates são épicos, os cenários são épicos, ir do ponto A ao ponto B é épico, tudo é épico. O jogo é isso, ir até cada um dos 16 bosses e derrotá-los. "+
 		           "Cada um deles vai ter sua prórpia movimentação e estratégia fazendo com que cada confronto seja mais um puzzle do que um combate direto, o que torna essa obra única com uma atmosfera grandiosa que faz você se sentir poderoso, mesmo sendo muito pequeno.", 
-        nota: 7.7 
+        nota: 7.81 
     },
 	{ 
         tipo: "jogos", 
@@ -352,15 +359,19 @@ const obras = [
         tipo: "jogos", 
         titulo: "South Park: The Stick of Truth (2014)", 
         imagem: "img/stick.jpeg", 
-        descricao: "", 
-        nota: 0.0 
+        descricao: "Sei que o humor de South Park não agrada a todos. Na maioria do tempo, ele me agrada. Esse jogo mistura muito bem aquela brincadeira de criança com as maiores loucuras imagináveis. A comédia utilizada é aquela que eu mais gosto: algo muito idiota levado muito a sério. "+
+		           "Temos magia, facções, objetos extremamente poderosos e zumbis na*istas, tudo misturado do jeito mais caótico e satírico possível. A cidade se transforma em um vasto reino que dá vontade de explorar em uma jornada imersiva para se tornar uma lenda e salvar o mundo. "+
+				   "O jogo é muito envolvente, mesmo com todos os absurdos, e é impossível tentar explicar o que está acontecendo para alguém que entrou no cômodo agora e está vendo alienígenas sendo derrotados por uma criança desbocada com sobrepeso empunhando um graveto mágico.", 
+        nota: 8.1 
     },
 	{ 
         tipo: "jogos", 
         titulo: "South Park: The Fractured But Whole (2017)", 
         imagem: "img/fractured.jpeg", 
-        descricao: "", 
-        nota: 0.0 
+        descricao: "Sei que o humor de South Park não agrada a todos. Na maioria do tempo, ele me agrada. Esse jogo mistura muito bem aquela brincadeira de criança com as maiores loucuras imagináveis. A comédia utilizada é aquela que eu mais gosto: algo muito idiota levado muito a sério. "+
+				   "Temos super-poderes, facções, objetos extremamente poderosos e viagem no tempo, tudo misturado do jeito mais caótico e satírico possível. A cidade se transforma em um território a ser protegido que dá vontade de explorar em uma jornada imersiva para se tornar o maior herói e salvar o mundo. "+
+				   "O jogo é muito envolvente, mesmo com todos os absurdos, e é impossível tentar explicar o que está acontecendo para alguém que entrou no cômodo agora e está vendo animais satânicos sendo derrotados por uma criança desbocada com sobrepeso fantasiada de guaxinim.",
+        nota: 8.0 
     },
 	{ 
         tipo: "jogos", 
@@ -477,7 +488,7 @@ const obras = [
         descricao: "Suco da virada do milênio, Buffy é muito mais que uma série adolescente, conseguindo tocar em temas muito profundos, seja em arcos mais longos ou apenas em um único episódio. "+
 		           "Seguimos a dinâmica de 'monstro do dia' enquanto há uma trama maior ao longo da temporada com cada episódio trazendo uma virada interessante, subvertendo estereótipos e clichês do gênero. "+
 				   "Outro ponto muito importante são os personagens, todos carismáticos e bem escritos, elevando o simples drama adolescente para algo mais relacionável e real.", 
-        nota: 7.8 
+        nota: 7.82 
     },
 	{ 
         tipo: "series", 

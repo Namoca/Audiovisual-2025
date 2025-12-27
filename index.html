@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ranking Audiovisual Pro</title>
+    <title>Ranking Audiovisual 2025</title>
     <style>
         :root { 
             --primary: #ffd700; 
@@ -35,7 +35,7 @@
             cursor: pointer;
             font-size: 22px;
             font-weight: bold;
-            display: none; /* Invisível inicialmente */
+            display: none;
             z-index: 10001;
             box-shadow: 0 5px 15px rgba(0,0,0,0.5);
             transition: var(--transition);
@@ -46,51 +46,18 @@
             background-color: #fff;
         }
 
-        /* --- PROPAGANDA FIXA --- */
-        .banner-container {
-            position: fixed;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 90%;
-            max-width: 500px;
-            background: #151515;
-            border: 2px solid var(--primary);
-            border-radius: 12px;
-            overflow: hidden;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 80px;
-            z-index: 9999;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.8);
-            animation: surgimento 0.5s ease-out;
-        }
-
-        .banner-container img { width: 100%; height: auto; display: block; max-height: 300px; object-fit: cover; }
-        
-        .btn-fechar-ad {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background: rgba(0,0,0,0.7);
-            color: #fff;
-            border: 1px solid #555;
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        /* --- BOTÃO ATIVO --- */
+        .btn-ativo {
+            background-color: var(--primary) !important;
+            color: var(--bg-dark) !important;
             font-weight: bold;
-            z-index: 10;
+            border-color: #fff !important;
         }
 
         /* --- LAYOUT GERAL --- */
-        h1 { text-align: center; color: var(--primary); margin-bottom: 30px; padding: 0 10px; }
+        h1 { text-align: center; color: var(--primary); margin-bottom: 30px; }
         
-        .controles { max-width: 800px; margin: 0 auto 30px; text-align: center; padding: 0 10px; }
+        .controles { max-width: 800px; margin: 0 auto 30px; text-align: center; }
         
         #busca { 
             width: 100%; 
@@ -102,10 +69,8 @@
             color: white; 
             outline: none; 
             margin-bottom: 20px; 
-            box-sizing: border-box; 
         }
-        #busca:focus { border-color: var(--primary); }
-        
+
         .botoes-container { display: flex; flex-direction: column; gap: 15px; align-items: center; }
         .grupo-botoes { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
         
@@ -121,8 +86,7 @@
         }
         button:hover { background: #333; border-color: var(--primary); }
         
-        .btn-inverter { background: #2a2a2a; border-color: #555; font-weight: bold; padding: 10px 20px; width: auto; }
-
+        /* --- RANKING DETALHADO (ORIGINAL) --- */
         .ranking { max-width: 850px; margin: auto; padding-bottom: 100px; }
         
         .item { 
@@ -135,7 +99,6 @@
             border-radius: 12px; 
             border: 1px solid #2a2a2a; 
             animation: surgimento 0.5s ease-out; 
-            transition: var(--transition); 
         }
         
         .posicao { 
@@ -154,62 +117,51 @@
         .item img { width: 120px; height: 160px; object-fit: cover; border-radius: 8px; background: #222; }
         
         .conteudo { flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 5px; }
-        .tag-tipo { font-size: 10px; text-transform: uppercase; color: var(--primary); letter-spacing: 1px; opacity: 0.8; }
         .titulo { font-size: 1.2rem; font-weight: bold; color: #fff; }
         .descricao { font-size: 0.95rem; color: var(--text-gray); }
-        .estrelas { color: var(--primary); font-size: 18px; margin-top: 5px; letter-spacing: 2px; }
+        .estrelas { color: var(--primary); font-size: 18px; margin-top: 5px; }
 
-        .card-disclaimer { background: var(--card-bg); padding: 25px; border-radius: 12px; border: 1px dashed #444; line-height: 1.6; color: var(--text-gray); }
+        /* --- RANKING RÁPIDO (NOVO) --- */
+        .item-rapido {
+            display: grid;
+            grid-template-columns: 50px 1fr 120px;
+            align-items: center;
+            background: #151515;
+            margin-bottom: 8px;
+            padding: 12px 18px;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary);
+            animation: surgimento 0.3s ease-out;
+        }
 
-        @keyframes surgimento { from { opacity: 0; transform: scale(0.98); } to { opacity: 1; transform: scale(1); } }
+        .item-rapido .titulo-rapido {
+            font-weight: bold;
+            color: #fff;
+            padding: 0 15px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
 
-        /* --- AJUSTES PARA CELULAR --- */
+        .item-rapido .estrelas-rapido {
+            text-align: right;
+            color: var(--primary);
+            font-size: 14px;
+        }
+
+        .card-disclaimer { background: var(--card-bg); padding: 25px; border-radius: 12px; border: 1px dashed #444; }
+
+        @keyframes surgimento { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
         @media (max-width: 600px) {
-            body { padding: 10px; }
-            
-            #backToTop {
-                bottom: 110px; /* Sobe para não ficar atrás do banner fixo */
-                right: 20px;
-                width: 45px;
-                height: 45px;
-            }
-
-            .grupo-botoes { 
-                display: grid; 
-                grid-template-columns: repeat(2, 1fr); 
-                width: 100%; 
-            }
-            
-            .btn-inverter { width: 100%; grid-column: span 2; }
-
-            .item { 
-                flex-direction: column; 
-                align-items: center; 
-                text-align: center;
-                padding: 20px;
-            }
-
-            .posicao { 
-                border-right: none; 
-                border-bottom: 1px solid #333; 
-                padding: 0 0 10px 0; 
-                min-width: auto;
-                width: 100%;
-            }
-
-            .img-container { width: 100%; }
-            .item img { width: 140px; height: auto; }
+            .item-rapido { grid-template-columns: 40px 1fr; }
+            .estrelas-rapido { grid-column: 2; text-align: left; padding-left: 15px; margin-top: 5px; }
         }
     </style>
 </head>
 <body>
 
-<button id="backToTop" onclick="scrollToTop()" title="Voltar ao topo">↑</button>
-
-<div id="propaganda" class="banner-container">
-    <button class="btn-fechar-ad" onclick="fecharPropaganda()" title="Fechar anúncio">×</button>
-    <img src="img/anuncio.png" alt="Anúncio">
-</div>
+<button id="backToTop" onclick="scrollToTop()">↑</button>
 
 <h1>🏆 First Time Consumed 2025</h1>
 
@@ -217,12 +169,13 @@
     <input type="text" id="busca" placeholder="Pesquisar título..." oninput="filtrar()">
     
     <div class="botoes-container">
-        <div class="grupo-botoes">
-            <button onclick="mostrarRanking('geral')">🌐 Geral</button>
-            <button onclick="mostrarRanking('series')">📺 Séries</button>
-            <button onclick="mostrarRanking('filmes')">🎬 Filmes</button>
-            <button onclick="mostrarRanking('jogos')">🎮 Jogos</button>
-            <button onclick="mostrarDisclaimer()" style="grid-column: span 2;">⚠️ Avisos</button>
+        <div class="grupo-botoes" id="filtro-botoes">
+            <button onclick="mudarCategoria('geral', this)" class="btn-ativo">🌐 Geral</button>
+            <button onclick="mudarCategoria('series', this)">📺 Séries</button>
+            <button onclick="mudarCategoria('filmes', this)">🎬 Filmes</button>
+            <button onclick="mudarCategoria('jogos', this)">🎮 Jogos</button>
+            <button onclick="alternarVisao(this)" style="border-style: dashed;">⚡ Ranking Rápido</button>
+            <button onclick="mostrarDisclaimer(this)">⚠️ Avisos</button>
         </div>
 
         <button class="btn-inverter" onclick="inverterOrdem()">🔁 Inverter Ordem</button>
@@ -238,28 +191,42 @@
     let ordemNormal = false;
     let termoBusca = "";
     let visualizandoDisclaimer = false;
+    let modoRapido = false;
 
-    // --- FUNÇÕES DO BOTÃO VOLTAR AO TOPO ---
+    // --- SCROLL ---
     window.onscroll = function() {
         const btn = document.getElementById("backToTop");
-        // Mostra o botão após descer 300px
-        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-            btn.style.display = "block";
-        } else {
-            btn.style.display = "none";
-        }
+        btn.style.display = (window.scrollY > 300) ? "block" : "none";
     };
 
     function scrollToTop() {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
-    // --- FUNÇÕES ORIGINAIS DO SITE ---
-    function fecharPropaganda() {
-        document.getElementById('propaganda').style.display = 'none';
+    // --- LÓGICA DE INTERFACE ---
+    function destacarBotao(elemento) {
+        const botoes = document.querySelectorAll('#filtro-botoes button');
+        botoes.forEach(b => b.classList.remove('btn-ativo'));
+        elemento.classList.add('btn-ativo');
+    }
+
+    function mudarCategoria(tipo, elemento) {
+        visualizandoDisclaimer = false;
+        filtroAtual = tipo;
+        destacarBotao(elemento);
+        renderizarRanking();
+    }
+
+    function alternarVisao(btn) {
+        modoRapido = !modoRapido;
+        btn.classList.toggle('btn-ativo', modoRapido);
+        renderizarRanking();
+    }
+
+    function mostrarDisclaimer(elemento) {
+        visualizandoDisclaimer = true;
+        destacarBotao(elemento);
+        renderizarRanking();
     }
 
     function escapeHTML(str) {
@@ -275,10 +242,7 @@
             if (nota5 >= i) {
                 estrelasHTML += '★'; 
             } else if (nota5 >= i - 0.5) {
-                estrelasHTML += '<span style="position:relative; display:inline-block;">' +
-                               '<span style="color:#444">☆</span>' +
-                               '<span style="position:absolute; left:0; top:0; width:45%; overflow:hidden;">★</span>' +
-                               '</span>';
+                estrelasHTML += '<span style="position:relative; display:inline-block;"><span style="color:#444">☆</span><span style="position:absolute; left:0; top:0; width:50%; overflow:hidden;">★</span></span>';
             } else {
                 estrelasHTML += '<span style="color:#444">☆</span>'; 
             }
@@ -286,71 +250,70 @@
         return estrelasHTML;
     }
 
+    // --- RENDERIZAÇÃO ---
     function renderizarRanking() {
         const container = document.getElementById("ranking-container");
         
         if (visualizandoDisclaimer) {
             container.innerHTML = `
                 <div class="card-disclaimer">
-                    <h2> Disclaimer / Avisos</h2>
-                    <p>As avaliações e notas apresentadas neste ranking refletem apenas uma <strong>opinião pessoal e subjetiva</strong> baseada em minha experiência individual com cada obra e o que foi-me dito pelos microplásticos em meu cérebro.</p>
+                    <h2>⚠️ Disclaimer / Avisos</h2>
+                     <p>As avaliações e notas apresentadas neste ranking refletem apenas uma <strong>opinião pessoal e subjetiva</strong> baseada em minha experiência individual com cada obra e o que foi-me dito pelos microplásticos em meu cérebro.</p>
+
                     <p>Vale ressaltar que só estão presentes obras que eu vi/joguei pela primeira vez no ano de 2025.</p>
-                    <p>Caso queira discutir qualquer um dos itens incluídos ou entrar em contato, <strong>@pietropilz</strong>.</p>
+
+                    <p>Caso queira discutir qualquer um dos itens incluídos, dar sujestões para 2026 ou simplesmente entrar em contato, <strong>@pietropilz</strong>.</p>
+
                     <hr style="border:0; border-top:1px solid #333; margin:20px 0;">
+
                     <p><small>As imagens e marcas citadas são de propriedade de seus respectivos detentores de direitos. Uso meramente ilustrativo.</small></p>
+
                 </div>
+
             `;
             return;
         }
 
         let lista = filtroAtual === "geral" ? [...obras] : obras.filter(o => o.tipo === filtroAtual);
-        
-        if (termoBusca) {
-            lista = lista.filter(o => o.titulo.toLowerCase().includes(termoBusca.toLowerCase()));
-        }
+        if (termoBusca) lista = lista.filter(o => o.titulo.toLowerCase().includes(termoBusca.toLowerCase()));
         
         lista.sort((a, b) => b.nota - a.nota);
-        const totalItens = lista.length;
+        const total = lista.length;
         if (!ordemNormal) lista.reverse();
 
         container.innerHTML = lista.map((obra, index) => {
-            const posicaoReal = ordemNormal ? (index + 1) : (totalItens - index);
-            return `
-                <div class="item">
-                    <div class="posicao">#${posicaoReal}</div>
-                    <div class="img-container">
-                        <img src="${obra.imagem}" alt="Poster" onerror="this.src='https://via.placeholder.com/120x150?text=Erro'">
-                    </div>
-                    <div class="conteudo">
-                        <div class="tag-tipo">${obra.tipo}</div>
-                        <div class="titulo">${escapeHTML(obra.titulo)}</div>
-                        <div class="descricao">${escapeHTML(obra.descricao)}</div>
-                        <div class="estrelas">${gerarEstrelas(obra.nota)}</div>
-                    </div>
-                </div>
-            `;
+            const posicao = ordemNormal ? (index + 1) : (total - index);
+            
+            if (modoRapido) {
+                return `
+                    <div class="item-rapido">
+                        <div style="color:var(--primary); font-weight:bold;">#${posicao}</div>
+                        <div class="titulo-rapido">${escapeHTML(obra.titulo)}</div>
+                        <div class="estrelas-rapido">${gerarEstrelas(obra.nota)}</div>
+                    </div>`;
+            } else {
+                return `
+                    <div class="item">
+                        <div class="posicao">#${posicao}</div>
+                        <div class="img-container">
+                            <img src="${obra.imagem}" onerror="this.src='https://via.placeholder.com/120x160?text=Erro'">
+                        </div>
+                        <div class="conteudo">
+                            <div class="titulo">${escapeHTML(obra.titulo)}</div>
+                            <div class="descricao">${escapeHTML(obra.descricao)}</div>
+                            <div class="estrelas">${gerarEstrelas(obra.nota)}</div>
+                        </div>
+                    </div>`;
+            }
         }).join('') || "<p style='text-align:center; color:#666'>Nenhum resultado encontrado.</p>";
     }
 
-    function mostrarRanking(tipo) { 
-        visualizandoDisclaimer = false;
-        filtroAtual = tipo; 
-        renderizarRanking(); 
-    }
-
-    function mostrarDisclaimer() {
-        visualizandoDisclaimer = true;
-        renderizarRanking();
-    }
-
     function inverterOrdem() { 
-        if(visualizandoDisclaimer) visualizandoDisclaimer = false;
         ordemNormal = !ordemNormal; 
         renderizarRanking(); 
     }
 
     function filtrar() { 
-        visualizandoDisclaimer = false;
         termoBusca = document.getElementById("busca").value; 
         renderizarRanking(); 
     }

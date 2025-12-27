@@ -18,29 +18,39 @@ const obras = [
         tipo: "filmes", 
         titulo: "O Lobo de Wall Street (2013)", 
         imagem: "img/o_lobo.jpg", 
-        descricao: "", 
-        nota: 0.0 
+        descricao: "'Me venda esta caneta', pois bem, essa é a 'biografia' mais divertida que já assisti. Acompanhamos a jornada de Jordan Belfort no mercado financeiro provando que o discurso é muito mais poderoso e "+
+		           "atraente do que qualquer verdade ou opinião. O sentido da vida é extravagância, é lucrar mais, fazer mais, ter mais prazer e ser cada vez mais. O filme é frenético com personagens muito interessantes, questionáveis e divertidos. "+
+				   "A estrutura de narração em primeira pessoa é brilhantemente utilizada como contraste à realidade apresentada em tela. E sim, esse é o filme em que o Leonardo DiCaprio cheirado pratica arremesso de anão.", 
+        nota: 9.6 
     },
     { 
         tipo: "filmes", 
         titulo: "Akira (1988)", 
         imagem: "img/akira.jpg", 
-        descricao: "", 
-        nota: 0.0
+        descricao: "Akira é sobre rebeldia juvenil em um futuro distópico com a famosa estética cyberpunk. Embora o filme seja de 1988, o mangá veio em 1982, "+
+		"fazendo da obra uma das primeiras grandes expressões dessa estética. O forte da narrativa é mostrar que, apesar dos grandes avanços tecnológicos, essa Tóquio futurista é marcada por imensas desigualdades socias, que levam a um sentimento de "+
+		"retaliação e destruição do sistema. Esse sentimento torna-se ainda mais poderoso com a introdução de super-humanos com poderes quase divinos. O enredo é acompanhado por um senso de urgência e pequenez frente a um mundo que oprime e esconde verdades.", 
+        nota: 9.0
     },
     { 
         tipo: "filmes", 
         titulo: "Pecadores (2025)", 
         imagem: "img/sinners.jpeg", 
-        descricao: "", 
-        nota: 0.0 
+        descricao: "Esse filme possui alma e é possível sentir isso. É impressionante ver como ele trabalha temas como ancestralidade, pertencimento, sonhos e música no seu estado mais místico. "+
+		           "É um filme de vampiros, usados como metáfora para algo que devora, deturpa e apropria-se falsamente um conceito, uma ideia ou uma cultura. O elenco é maravilhoso, com destaque para Michael B. Jordan e Michael B. Jordan nos papéis principais. "+
+				   "A tensão ao longo da narrativa avança de forma primorosa, há um temor real pela vida de cada personagem e é de cortar o coração ver o desenrolar daquela fatídica noite. "+
+				   "A obra consegue ser muito violenta e bonita ao mesmo tempo, repleta de significado e reflexão com verdadeiras catarses que criam uma experiência inesquecível.", 
+        nota: 10.0 
     },
     { 
         tipo: "filmes", 
         titulo: "Superman (2025)", 
         imagem: "img/superman.jpeg", 
-        descricao: "", 
-        nota: 0.0 
+        descricao: "Superman é o meu herói favorito, e o filme entende muito bem a essência desse personagem. A impressão que fica após assisti-lo é de ter acompanhado a 'aventura da semana' de uma hq. O nome da vez é James Gunn, que, além de apresentar o azulão, define as bases para mais uma tentativa de universo compartilhado. "+
+		           "Os coadjuvantes são muito carismáticos e definem o tom mais leve e aventuresco dessa obra, com desafios fantásticos como monstros gigantes e universos de bolso. Há uma busca por identidade por parte do próprio Superman, ele não é apenas o último filho de Krypton, também é Clark Kent, um ser humano como tantos outros, "+
+				   "que erra, ama e tenta todo dia ser uma pessoa melhor. "+
+				   "Cabe também o destaque para o vilão Lex Luthor, que não possui relação com nenhuma pessoa do mundo real e que manipula um conflito entre dois países que também não possuem nenhuma relação com países reais. Essa grande mistura traz uma obra divertida sobre esse personagem que representa a busca pela verdade e pela justiça.", 
+        nota: 9.5 
     },
 	{ 
         tipo: "filmes", 
@@ -64,8 +74,11 @@ const obras = [
         tipo: "filmes", 
         titulo: "Kpop Demon Hunters (2025)", 
         imagem: "img/kpop.jpg", 
-        descricao: "Fiz ouvindo as músicas", 
-        nota: 0.0 
+        descricao: "Esse filme não tinha o direito de ser tão bom e eu não tinha o direito de gostar tanto dele. É um musical promovido pela Netflix e todos lembramos da abominação chamada Emilia Pérez. Aqui temos o completo oposto: a verdadeira combinação de áudio e visual. "+
+		           "Esse ranking foi montado ao som de HUNTR/X e Saja Boys. Todas as músicas são excelentes e ajudam a avançar com a narrativa. O enredo por si só é simples, mas extremamente bem feito e comovente com personagens cativantes que deixam um gostinho de 'quero mais'. "+
+                   "A animação é impecável e estilosa, dando ainda mais personalidade para a obra com detalhes que fortalecem a trama, como a própria taxa de quadros dos personagens. Minha primeira experiência com o filme não foi no streaming, foi no breve período em que esteve nos cinemas, o que tornou esse primeiro contato ainda mais mágico. "+
+                   "Espero ansiosamente por novas produções nesse universo tão rico apresentado nessa que já é uma das minhas animações favoritas. ", 				   
+        nota: 9.8 
     },
     { 
         tipo: "filmes", 
@@ -201,6 +214,13 @@ const obras = [
 				   "Além disso, é sobre como as pessoas à sua volta podem te ajudar a superar esses problemas, como julgamentos são superficiais e o que realmente importa é ser um ser humano gentil e empático.", 
         nota: 7.0 
     },
+	{
+		tipo: "filmes",
+		titulo: "Avatar: Fogo e Cinzas",
+		imagem: "img/avatar.jpeg",
+		descricao: "",
+		nota: 0.0 
+	},
 	{ 
         tipo: "filmes", 
         titulo: "Donnie Darko (2001)", 
@@ -339,15 +359,18 @@ const obras = [
         tipo: "jogos", 
         titulo: "Tomb Raider (2013)", 
         imagem: "img/tomb1.jpg", 
-        descricao: "", 
-        nota: 0.0 
+        descricao: "Uma aventura em busca de sobrevivência em uma ilha tropical misteriosa habitada por um culto fanático e forças místicas. O foco aqui é encontrar seus amigos e fugir e, para isso, é preciso desvendar a fonte de uma tempestade misteriosa que atua como barreira em qualquer tentativa de deixar o lugar. "+
+		           "A aventura é linear e adentra cada vez mais nos segredos da ilha, proporcionando embates com vários tipos de inimigos, parkour!, busca por recursos e sequências de ação alucinantes."+
+				   "É muito empolgante acompanhar a Lara que, cada vez mais, deixa de apenas tentar não morrer para encarar de frente os desafios que surgem.", 
+        nota: 9.4 
     },
 	{ 
         tipo: "jogos", 
         titulo: "Rise of the Tomb Raider (2015)", 
         imagem: "img/tomb2.jpg", 
-        descricao: "", 
-        nota: 0.0 
+        descricao: "Admito, é melhor que o primeiro, só achei menos fluido. A expansão do universo dá uma dimensão de 'o mundo é vasto e cheio de mistérios, vamos lá!'. O ambiente invernal siberiano proporciona um tipo diferente de sobrevivência e o mistério agora gira em torno de uma organização criminosa e "+
+		           "um povo guardião antigo e um poderoso profeta. A gameplay segue a mesma, com mais foco em juntar recursos em um mapa semiaberto coberto de neve e gelo. Vale ressaltar a evolução de Lara de 'vítima' para exploradora destemida que enfrenta as forças do mal.", 
+        nota: 9.2 
     },
 	{ 
         tipo: "jogos", 
@@ -360,10 +383,13 @@ const obras = [
     },
 	{ 
         tipo: "jogos", 
-        titulo: "Silent Hill 2 (2001)", 
+        titulo: "Silent Hill 2 (2012)", 
         imagem: "img/silent.png", 
-        descricao: "", 
-        nota: 0.0 
+        descricao: "Jogar a versão HD de um jogo de 2001 foi um desafio, demorei a me acostumar com a câmera fixa... Fora esse percalço, houve muito mais percalços, mas todos sendo parte da experiência de explorar/sobreviver à Silent Hill. Tirando o elefante branco da sala, a história é "+
+		           "inacreditável de boa, com um plot twist inesquecível e atmosfera enlouquecedora. A trama avança de maneira impecável, afundando cada vez mais na psique em luto de James, nosso protagonista. A cidade em si é um espetáculo à parte. Ela é simples, misteriosa, coberta por neblina e perigos a cada esquina. "+
+				   "Cada local tem sua própria história e, embora não seja aparente à primeira vista, cada detalhe do jogo (outros personagens, inimigos, objetos) tem uma ligação profunda com James. Quanto à gameplay, fiquei impressionado com a evolução natural que é enfrentar cada desafio. São mecânicas de 25 anos atrás, muitas delas descontinuadas, contudo, "+
+                   "nenhuma é impeditiva e, juntas, trazem um charme muito cativante ao jogo.",				   
+        nota: 9.7 
     },
 	{ 
         tipo: "jogos", 
@@ -387,8 +413,10 @@ const obras = [
         tipo: "jogos", 
         titulo: "Astro Bot (2024)", 
         imagem: "img/astro.jpg", 
-        descricao: "", 
-        nota: 0.0 
+        descricao: "Que jogo gostosinho de jogar. Ele explora a totalidade dos recursos do controle e é muito atencioso a cada detalhe de cenário e gameplay. É um grande tributo/puxa-saquismo da história da PlayStation, passando por franquias exclusivas, consoles e acessórios. "+
+		           "É um jogo de plataforma 3D, com movimentação muito acertada e diversos tipos de desafio, desde exploração de mundo aberto até 'arcades' que duram 1 minuto...mas custam meia hora de gameplay. O protagonista, Astro, é um robozinho muito carismático que, se tivesse vindo em outras gerações, "+
+                   "seria hoje o grande mascote da empresa, mas ele já está no caminho. Essa é uma experiência que realmente não consigo expressar em palavras, apenas colocando o controle em suas mãos e colocando na fase do macaco escalador.",				   
+        nota: 9.3 
     },
 	{ 
         tipo: "jogos", 
@@ -417,8 +445,10 @@ const obras = [
         tipo: "jogos", 
         titulo: "Resident Evil 2 Remake (2019)", 
         imagem: "img/re2.png", 
-        descricao: "", 
-        nota: 0.0 
+        descricao: "Comparado com outras obras da franquia, o segundo jogo é extremamente 'pé no chão'. Zumbis são zumbis, e os que não são, são zumbis com esteroides. A trama inicia no terror e gradualmente se converte em ação, o que é muito importante, pois, no terror, "+
+		           "não se pode matar todos os inimigos, as balas acabam antes e eu descobri isso do pior jeito. As duas campanhas são levemente diferentes (aquilo de final verdadeiro, etc), mas acredito que fazer uma só delas já entregue tudo que o jogo tem a oferecer: uma luta por sobrevivência, gestão de recursos e "+
+				   "fuga constante. O perseguidor da vez, Mr. X, faz um excelente trabalho ao quase ser uma sombra do jogador, impedindo momentos de respiro e pressionando-o a achar uma saída o mais rápido possível. Os ambientes são maravilhosos, dando o teor de confusão e suspense que deixa a gameplay tão envolvente.", 
+        nota: 9.1 
     },
 	{ 
         tipo: "jogos", 
@@ -456,7 +486,7 @@ const obras = [
         imagem: "img/dandadan.jpg", 
         descricao: "A espera pela segunda temporada valeu a pena. DAN DA DAN tem tudo: humor, aventura, romance, mistério, ação, música, excelentes personagens, alienígenas, espíritos, um sistema de poder muito interessante, "+
 		           "história envolvente, plot-twists, futebol, cenas de ação muito bem feitas, robôs gigantes, monstros gigantes, momentos emocionantes, momentos tristes, momentos hilários, momentos fofos, "+
-                   "um ritmo bom, ideias espertas para resolução de problemas, amizade, esforço e vitória. Entre outros.",			   
+                   "um ritmo bom, ideias espertas para resolução de problemas, amizade, esforço e vitória...",			   
         nota: 8.9 
     },
 	{ 

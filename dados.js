@@ -219,7 +219,7 @@ const obras = [
 		titulo: "Avatar: Fogo e Cinzas",
 		imagem: "img/avatar.jpeg",
 		descricao: "",
-		nota: 0.0 
+		nota: 6.7 
 	},
 	{ 
         tipo: "filmes", 

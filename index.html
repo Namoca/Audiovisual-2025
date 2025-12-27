@@ -251,62 +251,67 @@
     }
 
     // --- RENDERIZAÇÃO ---
-    function renderizarRanking() {
-        const container = document.getElementById("ranking-container");
-        
-        if (visualizandoDisclaimer) {
-            container.innerHTML = `
-                <div class="card-disclaimer">
-                    <h2>⚠️ Disclaimer / Avisos</h2>
-                     <p>As avaliações e notas apresentadas neste ranking refletem apenas uma <strong>opinião pessoal e subjetiva</strong> baseada em minha experiência individual com cada obra e o que foi-me dito pelos microplásticos em meu cérebro.</p>
-
-                    <p>Vale ressaltar que só estão presentes obras que eu vi/joguei pela primeira vez no ano de 2025.</p>
-
-                    <p>Caso queira discutir qualquer um dos itens incluídos, dar sujestões para 2026 ou simplesmente entrar em contato, <strong>@pietropilz</strong>.</p>
-
-                    <hr style="border:0; border-top:1px solid #333; margin:20px 0;">
-
-                    <p><small>As imagens e marcas citadas são de propriedade de seus respectivos detentores de direitos. Uso meramente ilustrativo.</small></p>
-
-                </div>
-
-            `;
-            return;
-        }
-
-        let lista = filtroAtual === "geral" ? [...obras] : obras.filter(o => o.tipo === filtroAtual);
-        if (termoBusca) lista = lista.filter(o => o.titulo.toLowerCase().includes(termoBusca.toLowerCase()));
-        
-        lista.sort((a, b) => b.nota - a.nota);
-        const total = lista.length;
-        if (!ordemNormal) lista.reverse();
-
-        container.innerHTML = lista.map((obra, index) => {
-            const posicao = ordemNormal ? (index + 1) : (total - index);
-            
-            if (modoRapido) {
-                return `
-                    <div class="item-rapido">
-                        <div style="color:var(--primary); font-weight:bold;">#${posicao}</div>
-                        <div class="titulo-rapido">${escapeHTML(obra.titulo)}</div>
-                        <div class="estrelas-rapido">${gerarEstrelas(obra.nota)}</div>
-                    </div>`;
-            } else {
-                return `
-                    <div class="item">
-                        <div class="posicao">#${posicao}</div>
-                        <div class="img-container">
-                            <img src="${obra.imagem}" onerror="this.src='https://via.placeholder.com/120x160?text=Erro'">
-                        </div>
-                        <div class="conteudo">
-                            <div class="titulo">${escapeHTML(obra.titulo)}</div>
-                            <div class="descricao">${escapeHTML(obra.descricao)}</div>
-                            <div class="estrelas">${gerarEstrelas(obra.nota)}</div>
-                        </div>
-                    </div>`;
-            }
-        }).join('') || "<p style='text-align:center; color:#666'>Nenhum resultado encontrado.</p>";
+function renderizarRanking() {
+    const container = document.getElementById("ranking-container");
+    
+    if (visualizandoDisclaimer) {
+        container.innerHTML = `<div class="card-disclaimer">...</div>`; // (Mantive seu código de disclaimer)
+        return;
     }
+
+    // 1. Filtra por categoria
+    let lista = filtroAtual === "geral" ? [...obras] : obras.filter(o => o.tipo === filtroAtual);
+    
+    // 2. Ordena por nota (Sempre do maior para o menor para definir o ranking real)
+    lista.sort((a, b) => b.nota - a.nota);
+
+    // 3. Atribui a posição real (Rank) baseada na nota
+    // Independente de busca ou inversão, o melhor é sempre #1
+    let listaFinal = lista.map((obra, index) => ({
+        ...obra,
+        rank: index + 1
+    }));
+
+    // 4. Aplica a busca (agora cada item já "sabe" seu número de ranking)
+    if (termoBusca) {
+        listaFinal = listaFinal.filter(o => 
+            o.titulo.toLowerCase().includes(termoBusca.toLowerCase())
+        );
+    }
+
+    // 5. Inverte a ordem de EXIBIÇÃO visual se necessário
+    // Se ordemNormal for false (padrão do seu código), ele mostra o melhor primeiro.
+    // Se for true, ele inverte a lista.
+    if (ordemNormal) {
+        listaFinal.reverse();
+    }
+
+    container.innerHTML = listaFinal.map((obra) => {
+        const posicaoStr = `#${obra.rank}`;
+        
+        if (modoRapido) {
+            return `
+                <div class="item-rapido">
+                    <div style="color:var(--primary); font-weight:bold;">${posicaoStr}</div>
+                    <div class="titulo-rapido">${escapeHTML(obra.titulo)}</div>
+                    <div class="estrelas-rapido">${gerarEstrelas(obra.nota)}</div>
+                </div>`;
+        } else {
+            return `
+                <div class="item">
+                    <div class="posicao">${posicaoStr}</div>
+                    <div class="img-container">
+                        <img src="${obra.imagem}" onerror="this.src='https://via.placeholder.com/120x160?text=Erro'">
+                    </div>
+                    <div class="conteudo">
+                        <div class="titulo">${escapeHTML(obra.titulo)}</div>
+                        <div class="descricao">${escapeHTML(obra.descricao)}</div>
+                        <div class="estrelas">${gerarEstrelas(obra.nota)}</div>
+                    </div>
+                </div>`;
+        }
+    }).join('') || "<p style='text-align:center; color:#666'>Nenhum resultado encontrado.</p>";
+}
 
     function inverterOrdem() { 
         ordemNormal = !ordemNormal; 

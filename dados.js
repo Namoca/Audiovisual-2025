@@ -5,14 +5,14 @@ const obras = [
         titulo: "Um Sonho de Liberdade (1994)", 
         imagem: "img/um_sonho.png", 
         descricao: "", 
-        nota: 0.0 
+        nota: 10.3 
     },
     { 
         tipo: "filmes", 
         titulo: "Parasita (2019)", 
         imagem: "img/parasita.jpg", 
         descricao: "", 
-        nota: 0.0
+        nota: 10.2
     },
     { 
         tipo: "filmes", 
@@ -50,7 +50,7 @@ const obras = [
 		           "Os coadjuvantes são muito carismáticos e definem o tom mais leve e aventuresco dessa obra, com desafios fantásticos como monstros gigantes e universos de bolso. Há uma busca por identidade por parte do próprio Superman, ele não é apenas o último filho de Krypton, também é Clark Kent, um ser humano como tantos outros, "+
 				   "que erra, ama e tenta todo dia ser uma pessoa melhor. "+
 				   "Cabe também o destaque para o vilão Lex Luthor, que não possui relação com nenhuma pessoa do mundo real e que manipula um conflito entre dois países que também não possuem nenhuma relação com países reais. Essa grande mistura traz uma obra divertida sobre esse personagem que representa a busca pela verdade e pela justiça.", 
-        nota: 9.5 
+        nota: 9.3 
     },
 	{ 
         tipo: "filmes", 
@@ -362,7 +362,7 @@ const obras = [
         descricao: "Uma aventura em busca de sobrevivência em uma ilha tropical misteriosa habitada por um culto fanático e forças místicas. O foco aqui é encontrar seus amigos e fugir e, para isso, é preciso desvendar a fonte de uma tempestade misteriosa que atua como barreira em qualquer tentativa de deixar o lugar. "+
 		           "A aventura é linear e adentra cada vez mais nos segredos da ilha, proporcionando embates com vários tipos de inimigos, parkour!, busca por recursos e sequências de ação alucinantes."+
 				   "É muito empolgante acompanhar a Lara que, cada vez mais, deixa de apenas tentar não morrer para encarar de frente os desafios que surgem.", 
-        nota: 9.4 
+        nota: 9.5 
     },
 	{ 
         tipo: "jogos", 
@@ -416,14 +416,14 @@ const obras = [
         descricao: "Que jogo gostosinho de jogar. Ele explora a totalidade dos recursos do controle e é muito atencioso a cada detalhe de cenário e gameplay. É um grande tributo/puxa-saquismo da história da PlayStation, passando por franquias exclusivas, consoles e acessórios. "+
 		           "É um jogo de plataforma 3D, com movimentação muito acertada e diversos tipos de desafio, desde exploração de mundo aberto até 'arcades' que duram 1 minuto...mas custam meia hora de gameplay. O protagonista, Astro, é um robozinho muito carismático que, se tivesse vindo em outras gerações, "+
                    "seria hoje o grande mascote da empresa, mas ele já está no caminho. Essa é uma experiência que realmente não consigo expressar em palavras, apenas colocando o controle em suas mãos e colocando na fase do macaco escalador.",				   
-        nota: 9.3 
+        nota: 9.4 
     },
 	{ 
         tipo: "jogos", 
         titulo: "The Last of Us Part I (2022)", 
         imagem: "img/tlou1.png", 
         descricao: "", 
-        nota: 0.0 
+        nota: 10.4 
     },
 	{ 
         tipo: "jogos", 
@@ -501,10 +501,10 @@ const obras = [
     },
 	{ 
         tipo: "series", 
-        titulo: "Avatar: A Lenda de Aang(2005 - 2008)", 
+        titulo: "Avatar: A Lenda de Aang (2005 - 2008)", 
         imagem: "img/atla.jpg", 
         descricao: "", 
-        nota: 0.0 
+        nota: 10.5 
     },
 	{ 
         tipo: "series", 
@@ -539,6 +539,6 @@ const obras = [
         titulo: "Andor - 2º Temporada (2025)", 
         imagem: "img/andor.jpeg", 
         descricao: "", 
-        nota: 0.0 
+        nota: 10.1 
     }
 ];

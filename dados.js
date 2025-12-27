@@ -11,7 +11,10 @@ const obras = [
         tipo: "filmes", 
         titulo: "Parasita (2019)", 
         imagem: "img/parasita.jpg", 
-        descricao: "", 
+        descricao: "Parasita é um filme brilhante. Tudo nele tem um propósito e um significado, constantemente mais de um. "+
+		           "A trama começa com uma faceta mais cômica e com uma situação digna de comédias dos anos 90, gradualmente se aprofundando em discussões sociais e, quando você menos percebe, está inundado de uma forte provocação maravilhosamente bem construída. "+
+		           "Quem é o parasita? É o pobre que se aproveita da generosidade ingênua do rico? Ou seria o rico que se aproveita do trabalho desumanizado do pobre para manter sua posição? Ser rico é apenas ter dinheiro, ou é algo mais, como uma essência ou um cheiro?"+
+				   "A história me prendeu do início ao fim, seja pela situação interessantíssima proporcionada pelas famílias se mesclando cada vez mais ou seja pelos momentos de suspense que me deixaram na ponta da cadeira. Esse é um filme que merece todo o reconhecimento que conquistou e, pessoalmente, já o considero um clássico.", 
         nota: 10.2
     },
     { 
@@ -28,7 +31,7 @@ const obras = [
         titulo: "Akira (1988)", 
         imagem: "img/akira.jpg", 
         descricao: "Akira é sobre rebeldia juvenil em um futuro distópico com a famosa estética cyberpunk. Embora o filme seja de 1988, o mangá veio em 1982, "+
-		"fazendo da obra uma das primeiras grandes expressões dessa estética. O forte da narrativa é mostrar que, apesar dos grandes avanços tecnológicos, essa Tóquio futurista é marcada por imensas desigualdades socias, que levam a um sentimento de "+
+		"fazendo da obra uma das primeiras grandes expressões dessa estética. O forte da narrativa é mostrar que, apesar dos grandes avanços tecnológicos, essa Tóquio futurista é marcada por imensas desigualdades sociais, que levam a um sentimento de "+
 		"retaliação e destruição do sistema. Esse sentimento torna-se ainda mais poderoso com a introdução de super-humanos com poderes quase divinos. O enredo é acompanhado por um senso de urgência e pequenez frente a um mundo que oprime e esconde verdades.", 
         nota: 9.0
     },
@@ -538,7 +541,10 @@ const obras = [
         tipo: "series", 
         titulo: "Andor - 2º Temporada (2025)", 
         imagem: "img/andor.jpeg", 
-        descricao: "", 
+        descricao: "Essa série, mais uma vez, provou que Star Wars pode ser muito mais do que sabres de luz e vender bonecos. A trama começa cadenciada desenvolvendo os confrontos sociais e políticos até sua triunfante explosão nos episódios finais. "+
+		           "Os personagens já apresentados na primeira temporada ganham maior profundidade enquanto suas motivações são postas à prova constantemente. Com um teor de espionagem e criação da rebelião, o infame Império Galático passa "+
+				   "a ter sua amplitude e poder realmente explorados, criando um sistema de opressão, censura e táticas ditatoriais para garantir seus interesses. É interessantíssimo assistir ao desenrolar da trama, ainda mais sabendo que tudo aquilo culminará em "+
+				   "em filmes como Rogue One e Uma Nova Esperança. Esses 12 episódios conseguem dar ainda mais peso para essas obras, mostrando todo o sacrifício necessário para enfrentar o Império.", 
         nota: 10.1 
     }
 ];

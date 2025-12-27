@@ -255,8 +255,14 @@ function renderizarRanking() {
     const container = document.getElementById("ranking-container");
     
     if (visualizandoDisclaimer) {
-        container.innerHTML = `<div class="card-disclaimer">...</div>`; // (Mantive seu código de disclaimer)
-        return;
+        container.innerHTML = `<div class="card-disclaimer"><h2> Disclaimer / Avisos</h2>
+                    <p>As avaliações e notas apresentadas neste ranking refletem apenas uma <strong>opinião pessoal e subjetiva</strong> baseada em minha experiência individual com cada obra e o que foi-me dito pelos microplásticos em meu cérebro.</p>
+                    <p>Vale ressaltar que só estão presentes obras que eu vi/joguei pela primeira vez no ano de 2025.</p>
+                    <p>Caso queira discutir qualquer um dos itens incluídos ou entrar em contato, <strong>@pietropilz</strong>.</p>
+                    <hr style="border:0; border-top:1px solid #333; margin:20px 0;">
+                    <p><small>As imagens e marcas citadas são de propriedade de seus respectivos detentores de direitos. Uso meramente ilustrativo.</small></p>
+                </div>`;
+			return;
     }
 
     // 1. Filtra por categoria

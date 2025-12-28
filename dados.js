@@ -4,7 +4,10 @@ const obras = [
         tipo: "filmes", 
         titulo: "Um Sonho de Liberdade (1994)", 
         imagem: "img/um_sonho.png", 
-        descricao: "", 
+        descricao: "Hoje entendo completamente seu título de Top 1 do IMDB. Somente pela sinopse, não parece ser a coisa mais espetacular do mundo, mas hoje posso dizer que é definitivamente um dos melhores filmes que eu já assisti, com aquela estrutura de história que eu já adoro (narração em primeira pessoa acompanhando o passar dos anos). "+
+		           "É uma obra muito bonita sobre esperança e resiliência, com cenas e personagens muito tocantes. A Prisão Estadual de Shawshank torna-se um mundo à parte, com sua organização própria e com cada detento e cada funcionário tendo o seu papel. "+
+                   "O protagonista se torna uma força de transformação dentro dos muros da prisão, usando de toda a sua determinação e esperteza para melhorar aquele lugar e ajudar outros presos a se reencontrarem, sem nunca desistir de sua própria liberdade. O final catártico é lindo, "+
+                   "compensando todo o sacrifício e dor, e recompensando toda a esperança e resistência de um homem que nunca desistiu de seu sonho e fez de tudo para fazer outros acreditarem como ele.",				   
         nota: 10.3 
     },
     { 
@@ -49,7 +52,7 @@ const obras = [
         tipo: "filmes", 
         titulo: "Superman (2025)", 
         imagem: "img/superman.jpeg", 
-        descricao: "Superman é o meu herói favorito, e o filme entende muito bem a essência desse personagem. A impressão que fica após assisti-lo é de ter acompanhado a 'aventura da semana' de uma hq. O nome da vez é James Gunn, que, além de apresentar o azulão, define as bases para mais uma tentativa de universo compartilhado. "+
+        descricao: "Superman é o meu herói favorito, e o filme entende muito bem a essência desse personagem. A impressão que fica após assisti-lo é de ter acompanhado a 'aventura da semana' de uma HQ. O nome da vez é James Gunn, que, além de apresentar o azulão, define as bases para mais uma tentativa de universo compartilhado. "+
 		           "Os coadjuvantes são muito carismáticos e definem o tom mais leve e aventuresco dessa obra, com desafios fantásticos como monstros gigantes e universos de bolso. Há uma busca por identidade por parte do próprio Superman, ele não é apenas o último filho de Krypton, também é Clark Kent, um ser humano como tantos outros, "+
 				   "que erra, ama e tenta todo dia ser uma pessoa melhor. "+
 				   "Cabe também o destaque para o vilão Lex Luthor, que não possui relação com nenhuma pessoa do mundo real e que manipula um conflito entre dois países que também não possuem nenhuma relação com países reais. Essa grande mistura traz uma obra divertida sobre esse personagem que representa a busca pela verdade e pela justiça.", 
@@ -89,7 +92,7 @@ const obras = [
         imagem: "img/dracula.jpg", 
         descricao: "Não sei se era o intuito, mas eu sempre torci para o 'vilão'. Gary Oldman destrói como esse monstro amaldiçoado que um dia foi um homem que renunciou a Deus após a morte de sua amada. "+
 		           "A obra segue um caminho fortemente religioso para poder usufruir do profano, com o vampirismo sendo algo carnal e profundamente emotivo, enquanto os humanos racionais tentam enfrentar essa ameaça quase imparável. "+
-				   "Contudo, em essência, é um romance, duas almas a muito separadas têm a chance de, enfim, se reconectarem. E também temos o Keanu Reeves brigando com as palavras.", 
+				   "Contudo, em essência, é um romance, duas almas há muito separadas têm a chance de, enfim, se reconectarem. E também temos o Keanu Reeves brigando com as palavras.", 
         nota: 7.8 
     },
 	{ 
@@ -151,7 +154,7 @@ const obras = [
         imagem: "img/a_entrevista.jpg", 
         descricao: "Besteirol de alto nível. O fato desse filme existir já é inacreditável. Para quem nunca ouviu falar, o James Franco e o seu fiel escudeiro, Seth Rogen, "+
 		           "vão simplesmente entrevistar o líder norte coreano, virando parças dele no processo. Se fosse só isso já seria absurdo, mas eles ainda são encarregados da missão secreta de assassiná-lo. "+
-				   "A partir dessa sinopse o filme entrega o esperado, idiotice em todos os níveis, com uma dupla/trio que se afunda cada vez mais em desconfiança. Eu achei muito engraçado, só é imbecil demais em alguns momentos para estar mais alto nesse ranking.",  
+				   "A partir dessa sinopse, o filme entrega o esperado, idiotice em todos os níveis, com uma dupla/trio que se afunda cada vez mais em desconfiança. Eu achei muito engraçado, só é imbecil demais em alguns momentos para estar mais alto nesse ranking.",  
         nota: 6.7 
     },
     { 
@@ -195,7 +198,7 @@ const obras = [
         titulo: "Rivais (2024)", 
         imagem: "img/rivais.jpeg", 
         descricao: "Demorei muito para entender que era um filme sobre broderagem. Honestamente, vi o filme uma vez em janeiro e não reassisti, então não lembro suficientemente bem dele para uma análise mais profunda. " +
-		           "Talvez por isso esteja tão baixo, é esquecível. Durante a assistida, fiquei curioso com uma parte do filme que não era o foco, que encerra de maneira mais subjetiva em comparação com a linha principal que eu só saquei que tava lá no final. "+
+		           "Talvez por isso esteja tão baixo, é esquecível. Durante a assistida, fiquei curioso com uma parte do filme que não era o foco, que encerra de maneira mais subjetiva em comparação com a linha principal que eu só saquei que estava lá no final. "+
 				   "Sim, tinha várias passagens dessa trama que eu não as valorizei o suficiente porque queria saber quem ganharia a partida e se uma certa personagem plantaria o que cultivou. "+
 				   "Em geral, o ritmo, direção e atuação são bons, mas nada que realmente tenha me marcado de alguma forma.", 
         nota: 5.1 
@@ -221,7 +224,10 @@ const obras = [
 		tipo: "filmes",
 		titulo: "Avatar: Fogo e Cinzas",
 		imagem: "img/avatar.jpeg",
-		descricao: "",
+		descricao: "Temos um time com grandes nomes, organizado, que dribla e conduz a bola até o gol com maestria e finaliza com um chute de fora da área que isola a bola com vontade e decepcionando os espectadores. "+
+		           "Sim, é uma obra tecnicamente impecável e consagra mais uma vez Pandora como o lugar mais belo e impressionante do universo. Contudo, em narrativa, ele não chega lá. Primeiro que, para mim, inutilizou o filme anterior, trabalhando novamente as mesmas coisas. "+
+				   "Segundo, todas as tramas desenvolvidas (a maioria achei até bem desenvolvida) não possuem um desfecho condizente e satisfatório. Claro, o espetáculo visual é o grande atrativo e qualidade, porém, da maneira como foi apresentado, não pareceu difícil encaixar algumas pequenas coisas "+
+				   "que deixariam a experiência muito mais satisfatória.",
 		nota: 6.7 
 	},
 	{ 
@@ -264,7 +270,7 @@ const obras = [
         tipo: "filmes", 
         titulo: "O Mensageiro do Último Dia (2020)", 
         imagem: "img/emptyman.jpg", 
-        descricao: "Um bom terror lovecraftiano. Sinto que esse tive maior apego com esse filme porque ele sintetizou bem a experiência que é jogar uma campanha de Call of Cthulhu. "+
+        descricao: "Um bom terror lovecraftiano. Sinto que tive maior apego com esse filme porque ele sintetizou bem a experiência que é jogar uma campanha de Call of Cthulhu. "+
 				   "Trata-se de uma investigação que mergulha gradualmente no horror cósmico, questionando a realidade e moralidade do protagonista. "+
 				   "A obra traz momentos tensos e macabros rodeados de uma atmosfera mística e sombria e, apesar do teor sobrenatural, o mistério não tira fortemente os pés do chão até seus momentos finais.", 
         nota: 6.3 
@@ -307,7 +313,7 @@ const obras = [
         tipo: "filmes", 
         titulo: "Magnólia (1999)", 
         imagem: "img/magnolia.png", 
-        descricao: "Eu não entendi esse filme. É a única expliação para eu não ter gostado. O elenco é estreladíssimo e entrega cenas muito bonitas e verdadeiras. "+
+        descricao: "Eu não entendi esse filme. É a única explicação para eu não ter gostado. O elenco é estreladíssimo e entrega cenas muito bonitas e verdadeiras. "+
 				   "Meu problema com o filme é esse, é tudo muito verdadeiro. Pessoas com problemas reais, agindo como pessoas reais. Eu quis dormir, porque isso tudo não parecia estar indo para lugar nenhum. "+
 				   "Provavelmente em alguns anos devo reassistir com uma bagagem que não tenho hoje e somente existir por mais tempo sobre a terra pode me trazer. Um spoiler: Chove sapo.", 
         nota: 4.1 
@@ -355,7 +361,7 @@ const obras = [
         titulo: "Shadow of the Colossus (2005)", 
         imagem: "img/colossu.jpg", 
         descricao: "Épico pelo épico. O nome é épico, a proposta é épica, os combates são épicos, os cenários são épicos, ir do ponto A ao ponto B é épico, tudo é épico. O jogo é isso, ir até cada um dos 16 bosses e derrotá-los. "+
-		           "Cada um deles vai ter sua própia movimentação e estratégia fazendo com que cada confronto seja mais um puzzle do que um combate direto, o que torna essa obra única com uma atmosfera grandiosa que faz você se sentir poderoso, mesmo sendo muito pequeno.", 
+		           "Cada um deles vai ter sua própria movimentação e estratégia fazendo com que cada confronto seja mais um puzzle do que um combate direto, o que torna essa obra única com uma atmosfera grandiosa que faz você se sentir poderoso, mesmo sendo muito pequeno.", 
         nota: 7.81 
     },
 	{ 
@@ -408,7 +414,7 @@ const obras = [
         titulo: "South Park: The Fractured But Whole (2017)", 
         imagem: "img/fractured.jpeg", 
         descricao: "Sei que o humor de South Park não agrada a todos. Na maioria do tempo, ele me agrada. Esse jogo mescla muito bem aquela brincadeira de criança com as maiores loucuras imagináveis. A comédia utilizada é aquela que eu mais gosto: algo muito idiota levado muito a sério. "+
-				   "Temos super-poderes, facções, objetos extremamente poderosos e viagem no tempo, tudo misturado do jeito mais caótico e satírico possível. A cidade se transforma em um território a ser protegido que dá vontade de explorar em uma jornada imersiva para se tornar o maior herói e salvar o mundo. "+
+				   "Temos superpoderes, facções, objetos extremamente poderosos e viagem no tempo, tudo misturado do jeito mais caótico e satírico possível. A cidade se transforma em um território a ser protegido que dá vontade de explorar em uma jornada imersiva para se tornar o maior herói e salvar o mundo. "+
 				   "O jogo é muito envolvente, mesmo com todos os absurdos, e é impossível tentar explicar o que está acontecendo para alguém que entrou no cômodo agora e está vendo animais satânicos sendo derrotados por uma criança desbocada com sobrepeso fantasiada de guaxinim em um RPG de grid.",
         nota: 8.0 
     },
@@ -425,7 +431,10 @@ const obras = [
         tipo: "jogos", 
         titulo: "The Last of Us Part I (2022)", 
         imagem: "img/tlou1.png", 
-        descricao: "", 
+        descricao: "Um jogo com aspecto cinematográfico e uma obra sobre zumbis que trabalha seus dilemas da forma mais humana possível. A narrativa segue a clássica aventura do ponto A ao ponto B, mas a verdadeira jornada é a de um homem superando seu luto. Toda a gameplay é muito fluida com mecânicas muito assertivas para dar dinamismo aos combates, sobrevivência e exploração. "+
+		           "Ver as cidades abandonadas por 20 anos e ambientes tomados pelo fungo cordyceps deixa a experiência ainda mais surpreendente, com perigos que não se limitam aos infectados e mostram a frieza que o ser humano pode ter na busca pela sobrevivência. "+
+				   "A relação entre Joel e Ellie é construída de maneira tão natural que transforma o desfecho do jogo em um grito desesperado de alguém que está disposto a fazer de tudo para não sentir sua maior dor novamente. "+
+				   "The Last of Us é uma obra completa em história, personagens e interatividade, justificando toda a aclamação recebida ao longo dos anos.", 
         nota: 10.4 
     },
 	{ 
@@ -506,7 +515,10 @@ const obras = [
         tipo: "series", 
         titulo: "Avatar: A Lenda de Aang (2005 - 2008)", 
         imagem: "img/atla.jpg", 
-        descricao: "", 
+        descricao: "Assistir a essa série pela primeira vez este ano trouxe-me um questionamento: O que eu estava fazendo da minha vida até agora ao invés de ver isso? Que mundo maravilhoso, com construção maravilhosa, personagens maravilhosos e história maravilhosa. "+
+		           "A divertida e transformadora jornada de Aang nos conduz por lugares mágicos e extremamente interessantes, moldados pelos diferentes e geniais estilos de dobra dos quatro elementos. Todos os personagens têm a sua profundidade e carisma únicos, cada um com sua própria visão desse mundo em guerra. "+
+				   "Cabe o destaque também aos antagonistas, que trilham sua própria jornada em paralelo. A animação é repleta de momentos emotivos e reflexivos, com camadas mais densas que conseguem expor os horrores da guerra e as consequências que uma decisão pode ter. Há sequências de luta alucinantes que não se limitam à deslumbrante coreografia "+ 
+				   "proporcionada pelas dobras elementais, mas também são carregadas de significado e valores de cada personagem. É uma aventura completa e envolvente que tornou-se uma de minhas obras favoritas e a melhor experiência entre os filmes, jogos e séries que consumi em 2025." , 
         nota: 10.5 
     },
 	{ 

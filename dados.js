@@ -441,8 +441,10 @@ const obras = [
         tipo: "jogos", 
         titulo: "The Last of Us Part II (2024)", 
         imagem: "img/tlou2.jpeg", 
-        descricao: "", 
-        nota: 0.0 
+        descricao: "Como diria um grande sábio, 'a vingança nunca é plena, mata a alma e a envenena.' Esse jogo é brutal em todos os sentidos e é muito triste e assustador acompanhar a sádica jornada de um personagem tão amada. Eu gostei da segunda narrativa e, diferente do senso comum, dos personagens desenvolvidos nela. Ele é mecanicamente próximo ao primeiro, exceto por pequenas adições para deixar o combate e exploração mais interessante, o cerne é o mesmo. "+
+		           "Não acho tão perfeito quanto a parte um, principalmente quanto à montagem da história, pois são duas narrativas em paralelo, mas que se conectam muito pouco e são vivenciadas uma após a outra, sem intercalação. Não achei a gameplay tão fluida, havendo vários momentos de exploração e busca de recursos por ambientes muito parecidos que dão um ar repetitivo. Fora esses pontos, a experiência aproxima-se a que tive no anterior na maior parte do tempo, "+
+				   "garantindo uma imersão, intencionalmente, não tão prazerosa.", 
+        nota: 9.61 
     },
 	{ 
         tipo: "jogos", 

@@ -16,7 +16,7 @@ const obras = [
         imagem: "img/parasita.jpg", 
         descricao: "Parasita é um filme brilhante. Tudo nele tem um propósito e um significado, constantemente mais de um. "+
 		           "A trama começa com uma faceta mais cômica e com uma situação digna de comédias dos anos 90, gradualmente se aprofundando em discussões sociais e, quando você menos percebe, está inundado de uma forte provocação maravilhosamente bem construída. "+
-		           "Quem é o parasita? É o pobre que se aproveita da generosidade ingênua do rico? Ou seria o rico que se aproveita do trabalho desumanizado do pobre para manter sua posição? Ser rico é apenas ter dinheiro, ou é algo mais, como uma essência ou um cheiro?"+
+		           "Quem é o parasita? É o pobre que se aproveita da generosidade ingênua do rico? Ou seria o rico que se aproveita do trabalho desumanizado do pobre para manter sua posição? Ser rico é apenas ter dinheiro, ou é algo mais, como uma essência ou um cheiro? "+
 				   "A história me prendeu do início ao fim, seja pela situação interessantíssima proporcionada pelas famílias se mesclando cada vez mais ou seja pelos momentos de suspense que me deixaram na ponta da cadeira. Esse é um filme que merece todo o reconhecimento que conquistou e, pessoalmente, já o considero um clássico.", 
         nota: 10.2
     },
@@ -67,6 +67,15 @@ const obras = [
 		"O filme então segue nessa discussão sobre a verdadeira natureza de um vampiro, se é uma bênção de imortalidade e poder ou uma maldição de punição e restrição.", 
         nota: 8.2 
     },
+	{
+		tipo: "filmes",
+		titulo: "Advogado do Diabo (1997)",
+		imagem: "img/advogado.jpeg",
+		descricao: "Uma história sobre um dos seres mais cruéis e temidos do mundo, que agora se junta ao diabo. É um filme sobre o profano, tentação e corrupção, conceitos muito bem explorados sobre o casal recém chegado a Nova York. "+ 
+		           "A cidade grande é um labirinto de luxo e pecado, onde a ambição cega nosso Keanu Reeves que destrói sua própria vida. Al Pacino entrega uma atuação monumental, transformando cada diálogo em uma pregação satânica sobre a vaidade humana, seu pecado favorito. "+
+				   "A grande virada é esperada e acho que ela dá um passo a mais do que deveria (em sexto). Apesar disso, ainda gosto da outra virada que a segue, que questiona o livre-arbítrio e a ilusão criada pelo ego. ",
+		nota: 7.61
+	},
     { 
         tipo: "filmes", 
         titulo: "O Grande Gatsby (2013)", 
@@ -224,7 +233,7 @@ const obras = [
 		tipo: "filmes",
 		titulo: "Avatar: Fogo e Cinzas",
 		imagem: "img/avatar.jpeg",
-		descricao: "Temos um time com grandes nomes, organizado, que dribla e conduz a bola até o gol com maestria e finaliza com um chute de fora da área que isola a bola com vontade e decepcionando os espectadores. "+
+		descricao: "Temos um time com grandes nomes, organizado, que dribla e conduz a bola até o gol com maestria e finaliza com um chute de fora da área que isola a bola com vontade e decepciona os espectadores. "+
 		           "Sim, é uma obra tecnicamente impecável e consagra mais uma vez Pandora como o lugar mais belo e impressionante do universo. Contudo, em narrativa, ele não chega lá. Primeiro que, para mim, inutilizou o filme anterior, trabalhando novamente as mesmas coisas. "+
 				   "Segundo, todas as tramas desenvolvidas (a maioria achei até bem desenvolvida) não possuem um desfecho condizente e satisfatório. Claro, o espetáculo visual é o grande atrativo e qualidade, porém, da maneira como foi apresentado, não pareceu difícil encaixar algumas pequenas coisas "+
 				   "que deixariam a experiência muito mais satisfatória.",
@@ -369,7 +378,7 @@ const obras = [
         titulo: "Tomb Raider (2013)", 
         imagem: "img/tomb1.jpg", 
         descricao: "Uma aventura em busca de sobrevivência em uma ilha tropical misteriosa habitada por um culto fanático e forças místicas. O foco aqui é encontrar seus amigos e fugir e, para isso, é preciso desvendar a fonte de uma tempestade misteriosa que atua como barreira em qualquer tentativa de deixar o lugar. "+
-		           "A aventura é linear e adentra cada vez mais nos segredos da ilha, proporcionando embates com vários tipos de inimigos, parkour!, busca por recursos e sequências de ação alucinantes."+
+		           "A aventura é linear e adentra cada vez mais nos segredos da ilha, proporcionando embates com vários tipos de inimigos, parkour!, busca por recursos e sequências de ação alucinantes. "+
 				   "É muito empolgante acompanhar a Lara que, cada vez mais, deixa de apenas tentar não morrer para encarar de frente os desafios que surgem.", 
         nota: 9.5 
     },
@@ -377,7 +386,7 @@ const obras = [
         tipo: "jogos", 
         titulo: "Rise of the Tomb Raider (2015)", 
         imagem: "img/tomb2.jpg", 
-        descricao: "Admito, é melhor que o primeiro, só achei menos fluido. A expansão do universo dá uma dimensão de 'o mundo é vasto e cheio de mistérios, vamos lá!'. O ambiente invernal siberiano proporciona um tipo diferente de sobrevivência e o mistério agora gira em torno de uma organização criminosa e "+
+        descricao: "Admito, é tecnicamente superior ao primeiro, só achei menos fluido. A expansão do universo dá uma dimensão de 'o mundo é vasto e cheio de mistérios, vamos lá!'. O ambiente invernal siberiano proporciona um tipo diferente de sobrevivência e o mistério agora gira em torno de uma organização criminosa e "+
 		           "um povo guardião antigo e um poderoso profeta. A gameplay segue a mesma, com mais foco em juntar recursos em um mapa semiaberto coberto de neve e gelo. Vale ressaltar a evolução de Lara de 'vítima' para exploradora destemida que enfrenta as forças do mal.", 
         nota: 9.2 
     },
@@ -423,8 +432,8 @@ const obras = [
         titulo: "Astro Bot (2024)", 
         imagem: "img/astro.jpg", 
         descricao: "Que jogo gostosinho de jogar. Ele explora a totalidade dos recursos do controle e é muito atencioso a cada detalhe de cenário e gameplay. É um grande tributo/puxa-saquismo da história da PlayStation, passando por franquias exclusivas, consoles e acessórios. "+
-		           "É um jogo de plataforma 3D, com movimentação muito acertada e diversos tipos de desafio, desde exploração de mundo aberto até 'arcades' que duram 1 minuto...mas custam meia hora de gameplay. O protagonista, Astro, é um robozinho muito carismático que, se tivesse vindo em outras gerações, "+
-                   "seria hoje o grande mascote da empresa, mas ele já está no caminho. Essa é uma experiência que realmente não consigo expressar em palavras, apenas colocando o controle em suas mãos e colocando na fase do macaco escalador.",				   
+		           "É um jogo de plataforma 3D, com movimentação muito acertada e diversos tipos de desafio, desde exploração de mundo aberto até 'arcades' que duram 1 minuto...mas custam meia hora de gameplay. O protagonista, Astro, é um robozinho muito carismático que hoje já se consagrou como mascote "+
+                   "da empresa. Essa é uma experiência que realmente não consigo expressar em palavras, apenas colocando o controle em suas mãos e colocando na fase do macaco escalador.",				   
         nota: 9.4 
     },
 	{ 
@@ -443,7 +452,7 @@ const obras = [
         imagem: "img/tlou2.jpeg", 
         descricao: "Como diria um grande sábio, 'a vingança nunca é plena, mata a alma e a envenena.' Esse jogo é brutal em todos os sentidos e é muito triste e assustador acompanhar a sádica jornada de um personagem tão amada. Eu gostei da segunda narrativa e, diferente do senso comum, dos personagens desenvolvidos nela. Ele é mecanicamente próximo ao primeiro, exceto por pequenas adições para deixar o combate e exploração mais interessante, o cerne é o mesmo. "+
 		           "Não acho tão perfeito quanto a parte um, principalmente quanto à montagem da história, pois são duas narrativas em paralelo, mas que se conectam muito pouco e são vivenciadas uma após a outra, sem intercalação. Não achei a gameplay tão fluida, havendo vários momentos de exploração e busca de recursos por ambientes muito parecidos que dão um ar repetitivo. Fora esses pontos, a experiência aproxima-se a que tive no anterior na maior parte do tempo, "+
-				   "garantindo uma imersão, intencionalmente, não tão prazerosa.", 
+				   "garantindo uma imersão, intencionalmente, não tão prazerosa. E tem mecânica de tocar violão, muito bacana.", 
         nota: 9.61 
     },
 	{ 
@@ -461,7 +470,7 @@ const obras = [
         imagem: "img/re2.png", 
         descricao: "Comparado com outras obras da franquia, o segundo jogo é extremamente 'pé no chão'. Zumbis são zumbis, e os que não são, são zumbis com esteroides. A trama inicia no terror e gradualmente se converte em ação, o que é muito importante, pois, no terror, "+
 		           "não se pode matar todos os inimigos, as balas acabam antes e eu descobri isso do pior jeito. As duas campanhas são levemente diferentes (aquilo de final verdadeiro, etc), mas acredito que fazer uma só delas já entregue tudo que o jogo tem a oferecer: uma luta por sobrevivência, gestão de recursos e "+
-				   "fuga constante. O perseguidor da vez, Mr. X, faz um excelente trabalho ao quase ser uma sombra do jogador, impedindo momentos de respiro e pressionando-o a achar uma saída o mais rápido possível. Os ambientes são maravilhosos, dando o teor de confusão e suspense que deixa a gameplay tão envolvente.", 
+				   "fuga constante. O perseguidor da vez, Mr. X, faz um excelente trabalho ao quase ser uma sombra do jogador, impedindo momentos de respiro e pressionando-o a achar uma saída o mais rápido possível. Os ambientes são maravilhosos, dando o teor de confusão e suspense que deixa a gameplay bem envolvente.", 
         nota: 9.1 
     },
 	{ 
@@ -487,7 +496,7 @@ const obras = [
         tipo: "jogos", 
         titulo: "Fallout 4 (2015)", 
         imagem: "img/fallout4.jpg", 
-        descricao: "Eu amo Skyrim e amo a estética atompunk do universo Fallout. Pois bem, é exatamente o que temos aqui. Horas de caminhada por uma terra devastada com pergigos a cada esquina. E eu acabo com eles com um Mini Nuke Launcher. "+
+        descricao: "Eu amo Skyrim e amo a estética atompunk do universo Fallout. Pois bem, é exatamente o que temos aqui. Horas de caminhada por uma terra devastada com perigos a cada esquina. E eu acabo com eles com um Mini Nuke Launcher. "+
 		           "A dinâmica de escolhas entre facções e busca pelo próprio filho movem o jogador pelos quatro cantos do mapa com as mais diferentes paisagens. Há quem não goste, mas julgo que a mecânica de construir assentamentos traz um ar de "+
 				   "progresso e responsabilidade maior para a campanha.", 
         nota: 8.81 
@@ -557,7 +566,7 @@ const obras = [
         imagem: "img/andor.jpeg", 
         descricao: "Essa série, mais uma vez, provou que Star Wars pode ser muito mais do que sabres de luz e vender bonecos. A trama começa cadenciada desenvolvendo os confrontos sociais e políticos até sua triunfante explosão nos episódios finais. "+
 		           "Os personagens já apresentados na primeira temporada ganham maior profundidade enquanto suas motivações são postas à prova constantemente. Com um teor de espionagem e criação da rebelião, o infame Império Galático passa "+
-				   "a ter sua amplitude e poder realmente explorados, criando um sistema de opressão, censura e táticas ditatoriais para garantir seus interesses. É interessantíssimo assistir ao desenrolar da trama, ainda mais sabendo que tudo aquilo culminará em "+
+				   "a ter sua amplitude e poder realmente explorados, criando um sistema de opressão, censura e táticas ditatoriais para garantir seus interesses. É interessantíssimo assistir ao desenrolar da trama, ainda mais sabendo que tudo aquilo culminará "+
 				   "em filmes como Rogue One e Uma Nova Esperança. Esses 12 episódios conseguem dar ainda mais peso para essas obras, mostrando todo o sacrifício necessário para enfrentar o Império.", 
         nota: 10.1 
     }
